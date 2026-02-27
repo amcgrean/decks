@@ -2,7 +2,7 @@ node_modules/
 client/node_modules/
 server/node_modules/
 client/dist/
-server/data/beisser.db
+server/data/
 .env
 .env.local
 *.log
