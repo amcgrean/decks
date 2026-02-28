@@ -13,6 +13,7 @@ app.use(express.json());
 app.use('/api/products',   require('./routes/products'));
 app.use('/api/designs',    require('./routes/designs'));
 app.use('/api/analytics',  require('./routes/analytics'));
+app.use('/api/samples',    require('./routes/samples'));
 
 // Health check
 app.get('/api/health', (req, res) => {
