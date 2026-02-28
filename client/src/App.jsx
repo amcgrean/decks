@@ -399,9 +399,12 @@ export default function App() {
   );
 
   const sceneProps = {
-    houseStyle: env.houseStyle,
-    shape:      sel.shape,
-    deckColor:  sel.color,
+    houseStyle:  env.houseStyle,
+    houseColor:  env.houseColor,
+    showDoor:    env.showDoor,
+    showGrass:   env.showGrass,
+    shape:       sel.shape,
+    deckColor:   sel.color,
     railingStyle: sel.railing,
     view,
   };

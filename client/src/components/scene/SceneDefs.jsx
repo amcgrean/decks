@@ -1,9 +1,10 @@
-import { darken } from '../../utils/color';
+import { darken, lighten } from '../../utils/color';
 
 // Master SVG <defs> — shared by Surface and Corner views
 // Contains all gradients + filters ported verbatim from prototype
-export default function SceneDefs({ base }) {
+export default function SceneDefs({ base, wall }) {
   const b = base || '#9A7E5C';
+  const w = wall || '#F0E8D8';
   return (
     <defs>
       {/* ── SKY ── */}
@@ -29,19 +30,19 @@ export default function SceneDefs({ base }) {
         <stop offset="100%" stopColor="rgba(255,240,180,0)"/>
       </linearGradient>
 
-      {/* ── HOUSE WALLS (lit from upper-left) ── */}
+      {/* ── HOUSE WALLS (lit from upper-left) — driven by houseColor ── */}
       <linearGradient id="g-wall-front" x1="0.1" y1="0" x2="0.9" y2="1">
-        <stop offset="0%"   stopColor="#F0E8D8"/>
-        <stop offset="60%"  stopColor="#E4D8C4"/>
-        <stop offset="100%" stopColor="#CECAB0"/>
+        <stop offset="0%"   stopColor={lighten(w, 0.06)}/>
+        <stop offset="60%"  stopColor={w}/>
+        <stop offset="100%" stopColor={darken(w, 0.10)}/>
       </linearGradient>
       <linearGradient id="g-wall-warm" x1="0.05" y1="0" x2="0.95" y2="1">
-        <stop offset="0%"   stopColor="#EEE4D0"/>
-        <stop offset="100%" stopColor="#D8CDB8"/>
+        <stop offset="0%"   stopColor={lighten(w, 0.04)}/>
+        <stop offset="100%" stopColor={darken(w, 0.08)}/>
       </linearGradient>
       <linearGradient id="g-wall-side" x1="0" y1="0" x2="1" y2="0.2">
-        <stop offset="0%"   stopColor="#C8BC9C"/>
-        <stop offset="100%" stopColor="#B0A48A"/>
+        <stop offset="0%"   stopColor={darken(w, 0.18)}/>
+        <stop offset="100%" stopColor={darken(w, 0.30)}/>
       </linearGradient>
 
       {/* ── ROOF ── */}

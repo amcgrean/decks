@@ -2,28 +2,38 @@
 import SceneDefs from './SceneDefs';
 import { HouseSVG, DeckBoards, Railing, Environment } from './helpers';
 
-export default function SurfaceView({ houseStyle, shape, deckColor, railingStyle }) {
+export default function SurfaceView({ houseStyle, houseColor, showDoor, showGrass, shape, deckColor, railingStyle }) {
   const base = deckColor?.h || null;
   const W = 900, BY = 342;
+  const grassVisible = showGrass !== false;
   return (
     <svg viewBox={`0 0 ${W} 520`} style={{ width: '100%', height: '100%', display: 'block' }}>
-      <SceneDefs base={base}/>
+      <SceneDefs base={base} wall={houseColor}/>
 
       {/* Sky */}
       <rect width={W} height={520} fill="url(#g-sky)"/>
       <rect y={260} width={W} height={120} fill="url(#g-horizon)"/>
 
       {/* Lawn */}
-      <rect y={370} width={W} height={150} fill="url(#g-lawn)" filter="url(#f-grass)"/>
-      <rect y={370} width={W} height={150} fill="url(#g-lawn-sun)"/>
-      <rect y={370} width={W} height={18}  fill="rgba(0,0,0,0.14)"/>
+      {grassVisible ? (
+        <>
+          <rect y={370} width={W} height={150} fill="url(#g-lawn)" filter="url(#f-grass)"/>
+          <rect y={370} width={W} height={150} fill="url(#g-lawn-sun)"/>
+          <rect y={370} width={W} height={18}  fill="rgba(0,0,0,0.14)"/>
+        </>
+      ) : (
+        <>
+          <rect y={370} width={W} height={150} fill="#C8B89A"/>
+          <rect y={370} width={W} height={18}  fill="rgba(0,0,0,0.1)"/>
+        </>
+      )}
 
       {/* Foundation / grade */}
       <rect x={W*0.085} y={340} width={W*0.83} height={12} fill="url(#g-foundation)" rx="1"/>
       <rect x={W*0.085} y={349} width={W*0.83} height={5}  fill="rgba(0,0,0,0.14)"/>
 
       {/* House */}
-      <HouseSVG style={houseStyle} W={W} BY={BY}/>
+      <HouseSVG style={houseStyle} houseColor={houseColor} showDoor={showDoor} W={W} BY={BY}/>
 
       {/* Deck */}
       <DeckBoards base={base} shape={shape} W={W} DECK_Y={BY}/>

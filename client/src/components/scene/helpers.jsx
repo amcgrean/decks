@@ -33,7 +33,7 @@ export function Win({ x, y, w, h, mullion = true, arched = false, double = false
 }
 
 // ── CRAFTSMAN HOUSE ─────────────────────────────────────────
-function CraftsmanSVG({ W = 900, BY = 342 }) {
+function CraftsmanSVG({ W = 900, BY = 342, showDoor = true }) {
   const cx = W/2, L = 78, R = 822, T = 110;
   const rfL = L-22, rfR = R+22, rfPeak = 48;
   const porchR = 348;
@@ -80,18 +80,20 @@ function CraftsmanSVG({ W = 900, BY = 342 }) {
       ))}
       <rect x={L+44} y={BY}    width={110} height={12} fill="#C4B89A" rx="1"/>
       <rect x={L+52} y={BY+11} width={96}  height={10} fill="#B8AC8E" rx="1"/>
-      <rect x={L+84} y={BY-120} width={80} height={120} fill="#3A2418" rx="2"/>
-      <Win x={L+86} y={BY-118} w={76} h={44} mullion={false} arched={true}/>
-      <rect x={L+88} y={BY-70} width={36} height={68} fill="#2A1A0E" rx="1"/>
-      <rect x={L+128} y={BY-70} width={35} height={68} fill="#2A1A0E" rx="1"/>
-      <circle cx={L+128} cy={BY-34} r={5.5} fill="#C8A030"/>
-      <circle cx={L+128} cy={BY-34} r={3.5} fill="#D8B044"/>
+      {showDoor && <g>
+        <rect x={L+84} y={BY-120} width={80} height={120} fill="#3A2418" rx="2"/>
+        <Win x={L+86} y={BY-118} w={76} h={44} mullion={false} arched={true}/>
+        <rect x={L+88} y={BY-70} width={36} height={68} fill="#2A1A0E" rx="1"/>
+        <rect x={L+128} y={BY-70} width={35} height={68} fill="#2A1A0E" rx="1"/>
+        <circle cx={L+128} cy={BY-34} r={5.5} fill="#C8A030"/>
+        <circle cx={L+128} cy={BY-34} r={3.5} fill="#D8B044"/>
+      </g>}
     </g>
   );
 }
 
 // ── COLONIAL HOUSE ──────────────────────────────────────────
-function ColonialSVG({ W = 900, BY = 342 }) {
+function ColonialSVG({ W = 900, BY = 342, showDoor = true }) {
   const cx = W/2, L = 92, R = 808, T = 88;
   return (
     <g filter="url(#f-house-shadow)">
@@ -128,11 +130,13 @@ function ColonialSVG({ W = 900, BY = 342 }) {
           <rect x={colX-10} y={BY-6} width={20} height={8} fill="#DDD4BC" rx="1"/>
         </g>
       ))}
-      <rect x={cx-38} y={T+(BY-T)*0.53} width={76} height={(BY-T)*0.47} fill="#3A2818" rx="2"/>
-      <Win x={cx-36} y={T+(BY-T)*0.535} w={72} h={40} mullion={false} arched={true}/>
-      <rect x={cx-2} y={T+(BY-T)*0.535+42} width={4} height={(BY-T)*0.47-44} fill="#2A1A0C"/>
-      <circle cx={cx+19} cy={BY-30} r={5.5} fill="#C8A030"/>
-      <circle cx={cx+19} cy={BY-30} r={3.5} fill="#D8B044"/>
+      {showDoor && <g>
+        <rect x={cx-38} y={T+(BY-T)*0.53} width={76} height={(BY-T)*0.47} fill="#3A2818" rx="2"/>
+        <Win x={cx-36} y={T+(BY-T)*0.535} w={72} h={40} mullion={false} arched={true}/>
+        <rect x={cx-2} y={T+(BY-T)*0.535+42} width={4} height={(BY-T)*0.47-44} fill="#2A1A0C"/>
+        <circle cx={cx+19} cy={BY-30} r={5.5} fill="#C8A030"/>
+        <circle cx={cx+19} cy={BY-30} r={3.5} fill="#D8B044"/>
+      </g>}
       <rect x={cx-62} y={BY}    width={124} height={12} fill="#CAC0A6" rx="1"/>
       <rect x={cx-74} y={BY+11} width={148} height={10} fill="#BAB09A" rx="1"/>
     </g>
@@ -140,7 +144,7 @@ function ColonialSVG({ W = 900, BY = 342 }) {
 }
 
 // ── MODERN HOUSE ────────────────────────────────────────────
-function ModernSVG({ W = 900, BY = 342 }) {
+function ModernSVG({ W = 900, BY = 342, showDoor = true }) {
   const L = 62, R = 838, T = 75;
   const WW = R-L;
   return (
@@ -170,11 +174,13 @@ function ModernSVG({ W = 900, BY = 342 }) {
       <Win x={L+WW*0.76} y={T+32} w={WW*0.17} h={(BY-T-13)*0.38} mullion={false}/>
       <Win x={L+WW*0.56} y={T+32+(BY-T-13)*0.52} w={WW*0.17} h={(BY-T-13)*0.36} mullion={false}/>
       <Win x={L+WW*0.76} y={T+32+(BY-T-13)*0.52} w={WW*0.17} h={(BY-T-13)*0.36} mullion={false}/>
-      <rect x={L+WW*0.52-10} y={BY-124} width={46} height={8} fill="#32363C"/>
-      <rect x={L+WW*0.52-8}  y={BY-116} width={2}  height={116} fill="#3E444A"/>
-      <rect x={L+WW*0.52-2}  y={BY-116} width={42} height={116} fill="#1C2028" rx="1"/>
-      <Win x={L+WW*0.52} y={BY-112} w={38} h={58} mullion={false}/>
-      <circle cx={L+WW*0.52+10} cy={BY-38} r={4.5} fill="#909AA4"/>
+      {showDoor && <g>
+        <rect x={L+WW*0.52-10} y={BY-124} width={46} height={8} fill="#32363C"/>
+        <rect x={L+WW*0.52-8}  y={BY-116} width={2}  height={116} fill="#3E444A"/>
+        <rect x={L+WW*0.52-2}  y={BY-116} width={42} height={116} fill="#1C2028" rx="1"/>
+        <Win x={L+WW*0.52} y={BY-112} w={38} h={58} mullion={false}/>
+        <circle cx={L+WW*0.52+10} cy={BY-38} r={4.5} fill="#909AA4"/>
+      </g>}
       <rect x={L} y={T+13} width={WW} height={22} fill="rgba(0,0,0,0.18)"/>
       <rect x={L+WW*0.5-48} y={BY}    width={96}  height={11} fill="#A8A89A" rx="1"/>
       <rect x={L+WW*0.5-60} y={BY+10} width={120} height={9}  fill="#989888" rx="1"/>
@@ -183,7 +189,7 @@ function ModernSVG({ W = 900, BY = 342 }) {
 }
 
 // ── FARMHOUSE ───────────────────────────────────────────────
-function FarmhouseSVG({ W = 900, BY = 342 }) {
+function FarmhouseSVG({ W = 900, BY = 342, showDoor = true }) {
   const cx = W/2, L = 72, R = 828, T = 92;
   const WW = R-L;
   return (
@@ -220,11 +226,13 @@ function FarmhouseSVG({ W = 900, BY = 342 }) {
       ))}
       {[L+100,L+260,L+WW*0.54,L+WW*0.68].map((wx,i)=><Win key={`u${i}`} x={wx} y={T+26} w={82} h={98}/>)}
       {[L+100,L+WW*0.64].map((wx,i)=><Win key={`l${i}`} x={wx} y={T+168} w={82} h={102}/>)}
-      <rect x={cx-42} y={T+168} width={84} height={BY-T-168} fill="#3A2418" rx="2"/>
-      <Win x={cx-40} y={T+170} w={80} h={46} mullion={false} arched={true}/>
-      <rect x={cx-3} y={T+220} width={6} height={BY-T-222} fill="#2A1A0C"/>
-      <circle cx={cx+24} cy={BY-28} r={5.5} fill="#C8A030"/>
-      <circle cx={cx+24} cy={BY-28} r={3.5} fill="#D8B044"/>
+      {showDoor && <g>
+        <rect x={cx-42} y={T+168} width={84} height={BY-T-168} fill="#3A2418" rx="2"/>
+        <Win x={cx-40} y={T+170} w={80} h={46} mullion={false} arched={true}/>
+        <rect x={cx-3} y={T+220} width={6} height={BY-T-222} fill="#2A1A0C"/>
+        <circle cx={cx+24} cy={BY-28} r={5.5} fill="#C8A030"/>
+        <circle cx={cx+24} cy={BY-28} r={3.5} fill="#D8B044"/>
+      </g>}
       <rect x={cx-66} y={BY}    width={132} height={12} fill="#C4B8A0" rx="1"/>
       <rect x={cx-78} y={BY+11} width={156} height={10} fill="#B4A890" rx="1"/>
     </g>
@@ -232,11 +240,12 @@ function FarmhouseSVG({ W = 900, BY = 342 }) {
 }
 
 // ── HOUSE SVG ROUTER ────────────────────────────────────────
-export function HouseSVG({ style, W, BY }) {
-  if (style === 'colonial')  return <ColonialSVG  W={W} BY={BY}/>;
-  if (style === 'modern')    return <ModernSVG    W={W} BY={BY}/>;
-  if (style === 'farmhouse') return <FarmhouseSVG W={W} BY={BY}/>;
-  return <CraftsmanSVG W={W} BY={BY}/>;
+export function HouseSVG({ style, showDoor, W, BY }) {
+  const doorVisible = showDoor !== false;
+  if (style === 'colonial')  return <ColonialSVG  W={W} BY={BY} showDoor={doorVisible}/>;
+  if (style === 'modern')    return <ModernSVG    W={W} BY={BY} showDoor={doorVisible}/>;
+  if (style === 'farmhouse') return <FarmhouseSVG W={W} BY={BY} showDoor={doorVisible}/>;
+  return <CraftsmanSVG W={W} BY={BY} showDoor={doorVisible}/>;
 }
 
 // ── DECK BOARDS — procedural with grain filter ──────────────
