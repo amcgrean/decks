@@ -248,12 +248,14 @@ export function HouseSVG({ style, showDoor, W, BY }) {
   return <CraftsmanSVG W={W} BY={BY} showDoor={doorVisible}/>;
 }
 
-// ── DECK BOARDS — procedural with grain filter ──────────────
+// ── DECK BOARDS — procedural with grain filter & perspective-correct spacing ──
 export function DeckBoards({ base, shape, W = 900, DECK_Y = 342 }) {
   const b = base || '#9A7E5C';
-  const BH = 8.5, SH = 1.8, step = BH + SH;
-  const isWrap = shape === 'wraparound';
+  const isWrap  = shape === 'wraparound';
   const FASCIA_H = 14;
+
+  // Perspective offset at the near (front) edge — wider = more dramatic 3-D depth
+  const PERSP = isWrap ? 36 : 56;
 
   const deckEdges = {
     rectangle:  { L: W*0.088, R: W*0.912, depth: 148 },
@@ -264,15 +266,41 @@ export function DeckBoards({ base, shape, W = 900, DECK_Y = 342 }) {
   };
   const e = deckEdges[shape] || deckEdges.rectangle;
 
+  // Clip-path geometry — near (front) edge widens by PERSP on each side
   const mainPath = e.lshape
     ? `M${e.L},${DECK_Y} L${e.R},${DECK_Y} L${e.R},${DECK_Y+e.depth*0.52} L${W*0.56},${DECK_Y+e.depth*0.52} L${W*0.56},${DECK_Y+e.depth} L${e.L},${DECK_Y+e.depth} Z`
     : e.tshape
     ? `M${e.L},${DECK_Y} L${e.R},${DECK_Y} L${e.R},${DECK_Y+e.depth*0.5} L${W*0.64},${DECK_Y+e.depth*0.5} L${W*0.64},${DECK_Y+e.depth} L${W*0.36},${DECK_Y+e.depth} L${W*0.36},${DECK_Y+e.depth*0.5} L${e.L},${DECK_Y+e.depth*0.5} Z`
     : null;
   const mainPoly = !e.lshape && !e.tshape
-    ? `${e.L},${DECK_Y} ${e.R},${DECK_Y} ${e.R+(isWrap?18:22)},${DECK_Y+e.depth} ${e.L-(isWrap?18:22)},${DECK_Y+e.depth}`
+    ? `${e.L},${DECK_Y} ${e.R},${DECK_Y} ${e.R+PERSP},${DECK_Y+e.depth} ${e.L-PERSP},${DECK_Y+e.depth}`
     : null;
-  const numBoards = Math.ceil(e.depth / step) + 2;
+
+  // ── Perspective-correct board y-positions ─────────────────
+  // Horizon at y=190 (eye ≈ 5.5 ft above grade).
+  // Far edge (house junction): DECK_Y=342   → 152 px below horizon
+  // Near edge (viewer side):   DECK_Y+depth → 300 px below horizon
+  // Interpolating in 1/depth space gives foreshortening: near boards are
+  // wider-spaced, far boards compressed — exactly as a real camera sees it.
+  const yH       = 190;
+  const invFar   = 1 / (DECK_Y - yH);                     // 1/152
+  const invNear  = 1 / (DECK_Y + e.depth - yH);           // 1/300
+  const N_BOARDS = 18;
+  const boardYs  = Array.from({ length: N_BOARDS + 1 }, (_, i) => {
+    const t = i / N_BOARDS;
+    return Math.round(yH + 1 / (invFar + t * (invNear - invFar)));
+  });
+
+  // Upper-deck board positions (multilevel shape)
+  const invFarU  = e.upper ? 1 / (e.upperY - yH)  : 0;
+  const invNearU = e.upper ? 1 / (DECK_Y   - yH)  : 0;
+  const N_UP     = 8;
+  const upperYs  = e.upper
+    ? Array.from({ length: N_UP + 1 }, (_, i) => {
+        const t = i / N_UP;
+        return Math.round(yH + 1 / (invFarU + t * (invNearU - invFarU)));
+      })
+    : [];
 
   return (
     <g>
@@ -290,13 +318,18 @@ export function DeckBoards({ base, shape, W = 900, DECK_Y = 342 }) {
       {/* ── MAIN DECK SURFACE ── */}
       <g clipPath="url(#cp-deck-main)">
         <rect x={0} y={DECK_Y-12} width={W} height={e.depth+24} fill={b} filter="url(#f-wood)"/>
-        {Array.from({length: numBoards}, (_, i) => {
-          const y = DECK_Y + i * step;
+        {/* Perspective-correct boards: t=0→far/house, t=1→near/viewer */}
+        {boardYs.slice(0, -1).map((y, i) => {
+          const yNext = boardYs[i + 1];
+          const totalH = yNext - y;
+          if (totalH <= 0) return null;
+          const gapH = Math.max(Math.round(totalH * 0.15), 1);
+          const brdH = totalH - gapH;
           return (
             <g key={i}>
-              <rect x={0} y={y} width={W} height={BH}
+              <rect x={0} y={y} width={W} height={brdH}
                 fill={i%3===0 ? lighten(b,0.1) : i%3===1 ? b : darken(b,0.05)}/>
-              <rect x={0} y={y+BH} width={W} height={SH} fill={darken(b, 0.32)}/>
+              <rect x={0} y={y+brdH} width={W} height={gapH} fill={darken(b, 0.32)}/>
             </g>
           );
         })}
@@ -308,13 +341,17 @@ export function DeckBoards({ base, shape, W = 900, DECK_Y = 342 }) {
       {e.upper && (
         <g clipPath="url(#cp-deck-upper)">
           <rect x={0} y={e.upperY-12} width={W} height={e.upperH+24} fill={lighten(b,0.06)} filter="url(#f-wood)"/>
-          {Array.from({length: Math.ceil(e.upperH/step)+1}, (_, i) => {
-            const y = e.upperY + i * step;
+          {upperYs.slice(0, -1).map((y, i) => {
+            const yNext = upperYs[i + 1];
+            const totalH = yNext - y;
+            if (totalH <= 0) return null;
+            const gapH = Math.max(Math.round(totalH * 0.15), 1);
+            const brdH = totalH - gapH;
             return (
               <g key={i}>
-                <rect x={0} y={y} width={W} height={BH}
+                <rect x={0} y={y} width={W} height={brdH}
                   fill={i%3===0 ? lighten(b,0.12) : i%3===1 ? lighten(b,0.04) : b}/>
-                <rect x={0} y={y+BH} width={W} height={SH} fill={darken(b, 0.32)}/>
+                <rect x={0} y={y+brdH} width={W} height={gapH} fill={darken(b, 0.32)}/>
               </g>
             );
           })}
@@ -339,10 +376,11 @@ export function DeckBoards({ base, shape, W = 900, DECK_Y = 342 }) {
           </>}
         </>
       ) : (
-        <rect x={e.L-(isWrap?18:22)} y={DECK_Y+e.depth} width={e.R-e.L+(isWrap?36:44)} height={FASCIA_H+2} fill="url(#g-deck-fascia)"/>
+        <rect x={e.L-PERSP} y={DECK_Y+e.depth} width={e.R-e.L+PERSP*2} height={FASCIA_H+2}
+          fill="url(#g-deck-fascia)"/>
       )}
 
-      <ellipse cx={W/2} cy={DECK_Y+e.depth+FASCIA_H+10} rx={W*0.42} ry={16} fill="rgba(0,0,0,0.2)"/>
+      <ellipse cx={W/2} cy={DECK_Y+e.depth+FASCIA_H+10} rx={W*0.46} ry={18} fill="rgba(0,0,0,0.2)"/>
     </g>
   );
 }
