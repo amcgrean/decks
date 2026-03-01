@@ -19,6 +19,7 @@ export default function App() {
   const [mobile,        setMobile] = useState(false);
   const [sceneExpanded, setExpand] = useState(false);
   const [showEnv,       setShowEnv]= useState(false);
+  const [designId,      setDesignId] = useState(null);
 
   const [sel, setSel] = useState({
     shape:      'rectangle',
@@ -56,6 +57,62 @@ export default function App() {
     fireEvent('session_start');
   }, []);
 
+  // ── LOAD SHARED DESIGN FROM URL (?design=UUID) ────────────
+  useEffect(() => {
+    const id = new URLSearchParams(window.location.search).get('design');
+    if (!id) return;
+    fetch(`/api/designs/${id}`)
+      .then(r => r.ok ? r.json() : null)
+      .then(d => {
+        if (!d) return;
+        setSel({
+          shape:      d.deck_shape  || 'rectangle',
+          width:      d.deck_width  || 12,
+          depth:      d.deck_depth  || 16,
+          brand:      d.product?.brand      || null,
+          collection: d.product?.collection || null,
+          color:      d.product ? { n: d.product.color_name, h: d.product.hex } : null,
+          railing:    d.railing_style || 'baluster',
+          stairs:     d.stair_config
+            ? { ...d.stair_config, enabled: !!d.has_stairs }
+            : { enabled: !!d.has_stairs, steps: 3, width: 5, position: 'front-center' },
+        });
+        if (d.house_style)     setEnv(e => ({ ...e, houseStyle: d.house_style }));
+        if (d.house_color_hex) setEnv(e => ({ ...e, houseColor: d.house_color_hex }));
+        setDesignId(id);
+        setStep(6);
+      })
+      .catch(() => {});
+  }, []); // eslint-disable-line react-hooks/exhaustive-deps
+
+  // ── SAVE DESIGN → /api/designs ────────────────────────────
+  const saveDesign = async (customerEmail) => {
+    if (designId) return designId;
+    try {
+      const res = await fetch('/api/designs', {
+        method:  'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          house_style:     env.houseStyle,
+          house_color_hex: env.houseColor,
+          deck_shape:  sel.shape,
+          deck_width:  sel.width,
+          deck_depth:  sel.depth,
+          brand:       sel.brand,
+          color_hex:   sel.color?.h,
+          railing_style: sel.railing,
+          has_stairs:  sel.stairs?.enabled ? 1 : 0,
+          stair_config: sel.stairs,
+          customer_email: customerEmail || null,
+        }),
+      });
+      if (!res.ok) return null;
+      const { id } = await res.json();
+      setDesignId(id);
+      return id;
+    } catch { return null; }
+  };
+
   // ── STATE HELPERS ─────────────────────────────────────────
   const upd = (k, v) => setSel(s => ({ ...s, [k]: v }));
 
@@ -83,6 +140,7 @@ export default function App() {
     setStep(0);
     setView('surface');
     setExpand(false);
+    setDesignId(null);
     setSel({
       shape: 'rectangle', width: 12, depth: 16,
       brand: null, collection: null, color: null, railing: 'baluster',
@@ -148,7 +206,7 @@ export default function App() {
       );
       case 4: return <StepRailing sel={sel.railing} onSel={v => upd('railing', v)}/>;
       case 5: return <StepStairs stairs={sel.stairs} onStairs={v => upd('stairs', v)}/>;
-      case 6: return <StepSummary sel={sel} onRestart={restart}/>;
+      case 6: return <StepSummary sel={sel} env={env} designId={designId} onSave={saveDesign} onRestart={restart}/>;
       default: return null;
     }
   };
@@ -399,9 +457,12 @@ export default function App() {
   );
 
   const sceneProps = {
-    houseStyle: env.houseStyle,
-    shape:      sel.shape,
-    deckColor:  sel.color,
+    houseStyle:  env.houseStyle,
+    houseColor:  env.houseColor,
+    showDoor:    env.showDoor,
+    showGrass:   env.showGrass,
+    shape:       sel.shape,
+    deckColor:   sel.color,
     railingStyle: sel.railing,
     view,
   };

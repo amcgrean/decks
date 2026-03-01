@@ -5,8 +5,8 @@ import AerialView   from './AerialView';
 import FramingView  from './FramingView';
 import DetailView   from './DetailView';
 
-export default function Scene({ houseStyle, shape, deckColor, railingStyle, view }) {
-  const props = { houseStyle, shape, deckColor, railingStyle };
+export default function Scene({ houseStyle, houseColor, showDoor, showGrass, shape, deckColor, railingStyle, view }) {
+  const props = { houseStyle, houseColor, showDoor, showGrass, shape, deckColor, railingStyle };
 
   switch (view) {
     case 'corner':  return <CornerView  {...props}/>;

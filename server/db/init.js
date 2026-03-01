@@ -58,6 +58,21 @@ db.exec(`
     username      TEXT UNIQUE NOT NULL,
     password_hash TEXT NOT NULL
   );
+
+  CREATE TABLE IF NOT EXISTS sample_requests (
+    id            INTEGER PRIMARY KEY AUTOINCREMENT,
+    design_id     TEXT REFERENCES designs(id),
+    name          TEXT NOT NULL,
+    email         TEXT NOT NULL,
+    phone         TEXT,
+    color1_hex    TEXT,
+    color1_name   TEXT,
+    color2_hex    TEXT,
+    color2_name   TEXT,
+    brand         TEXT,
+    notes         TEXT,
+    created_at    DATETIME DEFAULT CURRENT_TIMESTAMP
+  );
 `);
 
 // ── SEED PRODUCTS ────────────────────────────────────────────

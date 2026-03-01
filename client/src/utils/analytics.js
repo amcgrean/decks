@@ -2,10 +2,10 @@
 // Session UUID is stored in sessionStorage (no PII)
 
 const getSessionId = () => {
-  let id = sessionStorage.getItem('beisser_session');
+  let id = localStorage.getItem('beisser_session');
   if (!id) {
     id = crypto.randomUUID();
-    sessionStorage.setItem('beisser_session', id);
+    localStorage.setItem('beisser_session', id);
   }
   return id;
 };

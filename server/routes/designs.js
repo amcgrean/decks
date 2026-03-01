@@ -9,8 +9,16 @@ router.post('/', (req, res) => {
     const {
       quote_name, notes, house_style, house_facade, house_color_hex,
       deck_shape, deck_width, deck_depth, product_id,
+      brand, color_hex,
       railing_style, has_stairs, stair_config, customer_email,
     } = req.body;
+
+    // Resolve product_id from brand + hex if not supplied directly
+    let resolvedProductId = product_id || null;
+    if (!resolvedProductId && brand && color_hex) {
+      const p = db.prepare('SELECT id FROM products WHERE brand = ? AND hex = ? LIMIT 1').get(brand, color_hex);
+      if (p) resolvedProductId = p.id;
+    }
 
     const id = uuidv4();
     db.prepare(`
@@ -21,7 +29,7 @@ router.post('/', (req, res) => {
       id, quote_name || null, notes || null, house_style || null,
       house_facade || null, house_color_hex || null,
       deck_shape || null, deck_width || null, deck_depth || null,
-      product_id || null, railing_style || null,
+      resolvedProductId, railing_style || null,
       has_stairs ? 1 : 0, stair_config ? JSON.stringify(stair_config) : null,
       customer_email || null
     );
