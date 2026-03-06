@@ -1,0 +1,78 @@
+/* trex-decking.cleaned.css
+   Cleaned from trex-decking.json
+   Base vars + CSS-only light grain textures
+*/
+
+:root {
+  --trex-enhance-cinnamon-cove: #CAC3BE;
+  --trex-enhance-clam-shell: #C2C1C0;
+  --trex-enhance-fasteners: #D5D3D3;
+  --trex-enhance-golden-hour: #D8CBBF;
+  --trex-enhance-honey-grove: #D8D3CE;
+  --trex-enhance-saddle: #CCC1BC;
+  --trex-enhance-tide-pool: #CFCDC9;
+  --trex-select-malted-barley: #D1CAC7;
+  --trex-select-pebble-grey: #C8C5C5;
+  --trex-select-saddle: #C7BAB4;
+  --trex-select-whiskey-barrel: #C1B6B2;
+  --trex-transcend-havana-gold: #CABFB6;
+  --trex-transcend-lava-rock: #B8B0AE;
+  --trex-transcend-rope-swing: #D6CCC5;
+  --trex-transcend-spiced-rum: #B5AFAD;
+  --trex-transcend-tiki-torch: #D1C1B8;
+  --trex-transcend-lineage-biscayne: #C9C4C2;
+  --trex-transcend-lineage-carmel: #D6CAC4;
+  --trex-transcend-lineage-hatteras: #C9BBB5;
+  --trex-transcend-lineage-jasper: #CABEB5;
+  --trex-transcend-lineage-rainier: #CCC9C9;
+  --trex-transcend-lineage-salt-flat: #D3CCC6;
+
+  --trex-grain-alpha: 0.12;
+  --trex-grain-size:  18px;
+  --trex-board-sheen: 0.10;
+}
+
+:root {
+  --trex-texture-template:
+    linear-gradient(0deg, rgba(255,255,255,var(--trex-board-sheen)) 0%, rgba(255,255,255,0) 45%, rgba(0,0,0,0) 100%),
+    repeating-linear-gradient(135deg,
+      rgba(255,255,255,calc(var(--trex-grain-alpha) * 0.55)) 0px,
+      rgba(255,255,255,0) 6px,
+      rgba(0,0,0,calc(var(--trex-grain-alpha) * 0.45)) 12px),
+    repeating-linear-gradient(90deg,
+      rgba(0,0,0,calc(var(--trex-grain-alpha) * 0.35)) 0px,
+      rgba(0,0,0,0) 2px,
+      rgba(255,255,255,calc(var(--trex-grain-alpha) * 0.25)) 4px,
+      rgba(0,0,0,0) 7px);
+}
+
+:root {
+  --trex-enhance-cinnamon-cove-texture: var(--trex-texture-template), linear-gradient(0deg, var(--trex-enhance-cinnamon-cove), var(--trex-enhance-cinnamon-cove));
+  --trex-enhance-clam-shell-texture: var(--trex-texture-template), linear-gradient(0deg, var(--trex-enhance-clam-shell), var(--trex-enhance-clam-shell));
+  --trex-enhance-fasteners-texture: var(--trex-texture-template), linear-gradient(0deg, var(--trex-enhance-fasteners), var(--trex-enhance-fasteners));
+  --trex-enhance-golden-hour-texture: var(--trex-texture-template), linear-gradient(0deg, var(--trex-enhance-golden-hour), var(--trex-enhance-golden-hour));
+  --trex-enhance-honey-grove-texture: var(--trex-texture-template), linear-gradient(0deg, var(--trex-enhance-honey-grove), var(--trex-enhance-honey-grove));
+  --trex-enhance-saddle-texture: var(--trex-texture-template), linear-gradient(0deg, var(--trex-enhance-saddle), var(--trex-enhance-saddle));
+  --trex-enhance-tide-pool-texture: var(--trex-texture-template), linear-gradient(0deg, var(--trex-enhance-tide-pool), var(--trex-enhance-tide-pool));
+  --trex-select-malted-barley-texture: var(--trex-texture-template), linear-gradient(0deg, var(--trex-select-malted-barley), var(--trex-select-malted-barley));
+  --trex-select-pebble-grey-texture: var(--trex-texture-template), linear-gradient(0deg, var(--trex-select-pebble-grey), var(--trex-select-pebble-grey));
+  --trex-select-saddle-texture: var(--trex-texture-template), linear-gradient(0deg, var(--trex-select-saddle), var(--trex-select-saddle));
+  --trex-select-whiskey-barrel-texture: var(--trex-texture-template), linear-gradient(0deg, var(--trex-select-whiskey-barrel), var(--trex-select-whiskey-barrel));
+  --trex-transcend-havana-gold-texture: var(--trex-texture-template), linear-gradient(0deg, var(--trex-transcend-havana-gold), var(--trex-transcend-havana-gold));
+  --trex-transcend-lava-rock-texture: var(--trex-texture-template), linear-gradient(0deg, var(--trex-transcend-lava-rock), var(--trex-transcend-lava-rock));
+  --trex-transcend-rope-swing-texture: var(--trex-texture-template), linear-gradient(0deg, var(--trex-transcend-rope-swing), var(--trex-transcend-rope-swing));
+  --trex-transcend-spiced-rum-texture: var(--trex-texture-template), linear-gradient(0deg, var(--trex-transcend-spiced-rum), var(--trex-transcend-spiced-rum));
+  --trex-transcend-tiki-torch-texture: var(--trex-texture-template), linear-gradient(0deg, var(--trex-transcend-tiki-torch), var(--trex-transcend-tiki-torch));
+  --trex-transcend-lineage-biscayne-texture: var(--trex-texture-template), linear-gradient(0deg, var(--trex-transcend-lineage-biscayne), var(--trex-transcend-lineage-biscayne));
+  --trex-transcend-lineage-carmel-texture: var(--trex-texture-template), linear-gradient(0deg, var(--trex-transcend-lineage-carmel), var(--trex-transcend-lineage-carmel));
+  --trex-transcend-lineage-hatteras-texture: var(--trex-texture-template), linear-gradient(0deg, var(--trex-transcend-lineage-hatteras), var(--trex-transcend-lineage-hatteras));
+  --trex-transcend-lineage-jasper-texture: var(--trex-texture-template), linear-gradient(0deg, var(--trex-transcend-lineage-jasper), var(--trex-transcend-lineage-jasper));
+  --trex-transcend-lineage-rainier-texture: var(--trex-texture-template), linear-gradient(0deg, var(--trex-transcend-lineage-rainier), var(--trex-transcend-lineage-rainier));
+  --trex-transcend-lineage-salt-flat-texture: var(--trex-texture-template), linear-gradient(0deg, var(--trex-transcend-lineage-salt-flat), var(--trex-transcend-lineage-salt-flat));
+}
+
+.trex-board {
+  background-size: 100% 100%, var(--trex-grain-size) var(--trex-grain-size), 10px 100%, 100% 100%;
+  background-blend-mode: overlay, overlay, overlay, normal;
+  border-radius: 10px;
+}

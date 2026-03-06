@@ -1,0 +1,100 @@
+{
+  "Serenity": [
+    {
+      "name": "Amberwood",
+      "slug": "amberwood",
+      "collection": "Serenity",
+      "product_url": "https://www.wolfhomeproducts.com/product/amberwood/",
+      "image_url": "https://www.wolfhomeproducts.com/wp-content/uploads/2024/01/SereAmb.jpg",
+      "hex": "#A58566"
+    },
+    {
+      "name": "Ashland",
+      "slug": "ashland",
+      "collection": "Serenity",
+      "product_url": "https://www.wolfhomeproducts.com/product/ashland/",
+      "image_url": "https://www.wolfhomeproducts.com/wp-content/uploads/2024/01/SereAshl.jpg",
+      "hex": "#786E69"
+    },
+    {
+      "name": "Beechwood",
+      "slug": "beechwood",
+      "collection": "Serenity",
+      "product_url": "https://www.wolfhomeproducts.com/product/beechwood/",
+      "image_url": "https://www.wolfhomeproducts.com/wp-content/uploads/2023/12/SereBeec.jpg",
+      "hex": "#BDA288"
+    },
+    {
+      "name": "Black Walnut",
+      "slug": "black-walnut",
+      "collection": "Serenity",
+      "product_url": "https://www.wolfhomeproducts.com/product/serenity-black-walnut/",
+      "image_url": "https://www.wolfhomeproducts.com/wp-content/uploads/2023/05/SereBla.jpg",
+      "hex": "#645E57"
+    },
+    {
+      "name": "Driftwood Grey",
+      "slug": "driftwood-grey",
+      "collection": "Serenity",
+      "product_url": "https://www.wolfhomeproducts.com/product/serenity-driftwood-grey/",
+      "image_url": "https://www.wolfhomeproducts.com/wp-content/uploads/2023/05/SereDri-2.jpg",
+      "hex": "#888C8F"
+    },
+    {
+      "name": "Golden Cypress",
+      "slug": "golden-cypress",
+      "collection": "Serenity",
+      "product_url": "https://www.wolfhomeproducts.com/product/serenity-golden-cypress/",
+      "image_url": "https://www.wolfhomeproducts.com/wp-content/uploads/2023/05/SereGol-1.jpg",
+      "hex": "#C6A67F"
+    },
+    {
+      "name": "Harbor Grey",
+      "slug": "harbor-grey",
+      "collection": "Serenity",
+      "product_url": "https://www.wolfhomeproducts.com/product/harbor-grey/",
+      "image_url": "https://www.wolfhomeproducts.com/wp-content/uploads/2024/01/SereHar.jpg",
+      "hex": "#ABAAA1"
+    },
+    {
+      "name": "Onyx",
+      "slug": "onyx",
+      "collection": "Serenity",
+      "product_url": "https://www.wolfhomeproducts.com/product/serenity-onyx/",
+      "image_url": "https://www.wolfhomeproducts.com/wp-content/uploads/2023/05/SereOny-2.jpg",
+      "hex": "#56534B"
+    },
+    {
+      "name": "Rosewood",
+      "slug": "rosewood",
+      "collection": "Serenity",
+      "product_url": "https://www.wolfhomeproducts.com/product/serenity-rosewood/",
+      "image_url": "https://www.wolfhomeproducts.com/wp-content/uploads/2023/05/SereRos-3.jpg",
+      "hex": "#85685D"
+    },
+    {
+      "name": "Sand Castle",
+      "slug": "sand-castle",
+      "collection": "Serenity",
+      "product_url": "https://www.wolfhomeproducts.com/product/serenity-sand-castle/",
+      "image_url": "https://www.wolfhomeproducts.com/wp-content/uploads/2023/05/SereSan.jpg",
+      "hex": "#B6A791"
+    },
+    {
+      "name": "Silver Teak",
+      "slug": "silver-teak",
+      "collection": "Serenity",
+      "product_url": "https://www.wolfhomeproducts.com/product/serenity-silver-teak/",
+      "image_url": "https://www.wolfhomeproducts.com/wp-content/uploads/2023/05/SereSil-2.jpg",
+      "hex": "#A39C90"
+    },
+    {
+      "name": "Weathered Ipe",
+      "slug": "weathered-ipe",
+      "collection": "Serenity",
+      "product_url": "https://www.wolfhomeproducts.com/product/serenity-weathered-ipe/",
+      "image_url": "https://www.wolfhomeproducts.com/wp-content/uploads/2023/05/SereWea-3.jpg",
+      "hex": "#8A7A6C"
+    }
+  ]
+}

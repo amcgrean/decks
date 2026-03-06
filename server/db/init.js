@@ -19,7 +19,9 @@ db.exec(`
     brand_name  TEXT NOT NULL,
     collection  TEXT NOT NULL,
     color_name  TEXT NOT NULL,
-    hex         TEXT NOT NULL,
+    slug        TEXT,
+    hex         TEXT,
+    image_url   TEXT,
     sort_order  INTEGER DEFAULT 0,
     active      INTEGER DEFAULT 1
   );

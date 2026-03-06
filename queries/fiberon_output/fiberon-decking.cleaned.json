@@ -1,0 +1,186 @@
+{
+  "Promenade": [
+    {
+      "name": "Shaded Cay",
+      "slug": "shaded-cay",
+      "image_url": "https://cdn.shopify.com/s/files/1/0565/4645/9837/files/ymb7u7lva1x26kl7hk6b.jpg?v=1695737578",
+      "hex": null
+    },
+    {
+      "name": "Moonlit Cove",
+      "slug": "moonlit-cove",
+      "image_url": "https://cdn.shopify.com/s/files/1/0565/4645/9837/files/cdbxr9otvpgamewn5tn0.jpg?v=1695737576",
+      "hex": null
+    },
+    {
+      "name": "Sandy Pier",
+      "slug": "sandy-pier",
+      "image_url": "https://cdn.shopify.com/s/files/1/0565/4645/9837/files/oskejrmlxfakkbc0ybny.jpg?v=1695737574",
+      "hex": null
+    },
+    {
+      "name": "Natural Reef",
+      "slug": "natural-reef",
+      "image_url": "https://cdn.shopify.com/s/files/1/0565/4645/9837/files/rkjbbp27keylynrtvgm0.jpg?v=1695737572",
+      "hex": null
+    },
+    {
+      "name": "Weathered Cliff",
+      "slug": "weathered-cliff",
+      "image_url": "https://cdn.shopify.com/s/files/1/0565/4645/9837/files/hhvmfqvpegusksvqauae.jpg?v=1695737570",
+      "hex": null
+    },
+    {
+      "name": "Russet Dune",
+      "slug": "russet-dune",
+      "image_url": "https://cdn.shopify.com/s/files/1/0565/4645/9837/files/e8pf0xxeew3l4zef30sw.jpg?v=1695737567",
+      "hex": null
+    }
+  ],
+  "Paramount": [
+    {
+      "name": "Mantel - Clay",
+      "slug": "mantel-clay",
+      "image_url": "https://cdn.shopify.com/s/files/1/0565/4645/9837/files/jodofzxrn33tfb8ddxla.jpg?v=1695738427",
+      "hex": null
+    },
+    {
+      "name": "Hearth - Brownstone",
+      "slug": "hearth-brownstone",
+      "image_url": "https://cdn.shopify.com/s/files/1/0565/4645/9837/files/um6qyuecxifxuex4hrrt.jpg?v=1695738427",
+      "hex": null
+    },
+    {
+      "name": "Mantel - Mineral",
+      "slug": "mantel-mineral",
+      "image_url": "https://cdn.shopify.com/s/files/1/0565/4645/9837/files/xxbozxqfuizjgz65kyvr.jpg?v=1695738427",
+      "hex": null
+    },
+    {
+      "name": "Hearth - Sandstone",
+      "slug": "hearth-sandstone",
+      "image_url": "https://cdn.shopify.com/s/files/1/0565/4645/9837/files/bfayesgr1amxmtdrmyq3.jpg?v=1695738427",
+      "hex": null
+    }
+  ],
+  "Concordia": [
+    {
+      "name": "Symmetry - Graphite",
+      "slug": "symmetry-graphite",
+      "image_url": "https://cdn.shopify.com/s/files/1/0565/4645/9837/files/qazguhmczpydnsxhfmrl.jpg?v=1701882462",
+      "hex": null
+    },
+    {
+      "name": "Symmetry - Burnt Umber",
+      "slug": "symmetry-burnt-umber",
+      "image_url": "https://cdn.shopify.com/s/files/1/0565/4645/9837/files/itr8kwnzrucdo8o0g6ll.jpg?v=1701882459",
+      "hex": null
+    },
+    {
+      "name": "Symmetry - Warm Sienna",
+      "slug": "symmetry-warm-sienna",
+      "image_url": "https://cdn.shopify.com/s/files/1/0565/4645/9837/files/fhjnw7ifp1prgtqwpnx8.jpg?v=1701882454",
+      "hex": null
+    },
+    {
+      "name": "Astir - Prairie Wheat",
+      "slug": "astir-prairie-wheat",
+      "image_url": "https://cdn.shopify.com/s/files/1/0565/4645/9837/files/w1tuly1dikregvajfipe.jpg?v=1701882452",
+      "hex": null
+    },
+    {
+      "name": "Astir - Mountain Ash",
+      "slug": "astir-mountain-ash",
+      "image_url": "https://cdn.shopify.com/s/files/1/0565/4645/9837/files/nelaiz3alcmsvhdvfis4.jpg?v=1701882450",
+      "hex": null
+    },
+    {
+      "name": "Astir - Seaside Mist",
+      "slug": "astir-seaside-mist",
+      "image_url": "https://cdn.shopify.com/s/files/1/0565/4645/9837/files/lbgwnyi8zf8lnciol13u.jpg?v=1701882448",
+      "hex": null
+    },
+    {
+      "name": "Horizon - Castle Gray",
+      "slug": "horizon-castle-gray",
+      "image_url": "https://cdn.shopify.com/s/files/1/0565/4645/9837/files/epy38qcril5nx40yig9t.jpg?v=1701882445",
+      "hex": null
+    },
+    {
+      "name": "Horizon - Ipe",
+      "slug": "horizon-ipe",
+      "image_url": "https://cdn.shopify.com/s/files/1/0565/4645/9837/files/vnvui2u2xelnuowbywod.jpg?v=1701882441",
+      "hex": null
+    }
+  ],
+  "Sanctuary": [
+    {
+      "name": "Moringa",
+      "slug": "moringa",
+      "image_url": "https://cdn.shopify.com/s/files/1/0565/4645/9837/files/nqcrmtqwgofw9wabq0qs.jpg?v=1695737597",
+      "hex": null
+    },
+    {
+      "name": "Latte",
+      "slug": "latte",
+      "image_url": "https://cdn.shopify.com/s/files/1/0565/4645/9837/files/qraekrvbd4c0sstifrbp.jpg?v=1695737596",
+      "hex": null
+    },
+    {
+      "name": "Earl Grey",
+      "slug": "earl-grey",
+      "image_url": "https://cdn.shopify.com/s/files/1/0565/4645/9837/files/lu2ummr7ktlxlpbew6ao.jpg?v=1695737594",
+      "hex": null
+    },
+    {
+      "name": "Chai",
+      "slug": "chai",
+      "image_url": "https://cdn.shopify.com/s/files/1/0565/4645/9837/files/xg8arj8h8pv3q2ixppze.jpg?v=1695737591",
+      "hex": null
+    },
+    {
+      "name": "Espresso",
+      "slug": "espresso",
+      "image_url": "https://cdn.shopify.com/s/files/1/0565/4645/9837/files/r29ebhu6xgurbiklszqx.jpg?v=1695737589",
+      "hex": null
+    }
+  ],
+  "Good Life": [
+    {
+      "name": "Escapes - Beach House",
+      "slug": "escapes-beach-house",
+      "image_url": "https://cdn.shopify.com/s/files/1/0565/4645/9837/files/zykwl83yoz7ifk65bhil.jpg?v=1701812955",
+      "hex": null
+    },
+    {
+      "name": "Weekender - Cottage",
+      "slug": "weekender-cottage",
+      "image_url": "https://cdn.shopify.com/s/files/1/0565/4645/9837/files/i5ntxwyyulfa2ffzedek.jpg?v=1701812954",
+      "hex": null
+    },
+    {
+      "name": "Escapes - Cabana",
+      "slug": "escapes-cabana",
+      "image_url": "https://cdn.shopify.com/s/files/1/0565/4645/9837/files/cxnrexauctb3xx7q5ayz.jpg?v=1701812953",
+      "hex": null
+    },
+    {
+      "name": "Weekender - Cabin",
+      "slug": "weekender-cabin",
+      "image_url": "https://cdn.shopify.com/s/files/1/0565/4645/9837/files/zqxfitddckgp0ji4aabl.jpg?v=1701812952",
+      "hex": null
+    },
+    {
+      "name": "Escapes - Tuscan Villa",
+      "slug": "escapes-tuscan-villa",
+      "image_url": "https://cdn.shopify.com/s/files/1/0565/4645/9837/files/obochesps8keda3lqqfx.jpg?v=1701812951",
+      "hex": null
+    },
+    {
+      "name": "Escapes - Bungalow",
+      "slug": "escapes-bungalow",
+      "image_url": "https://cdn.shopify.com/s/files/1/0565/4645/9837/files/iwfspcpozhj7cj8hwbfi.jpg?v=1701812944",
+      "hex": null
+    }
+  ]
+}

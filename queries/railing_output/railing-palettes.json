@@ -1,0 +1,245 @@
+[
+  {
+    "brand": "Westbury",
+    "line": "Aluminum",
+    "color": "Black Fine Texture",
+    "hex": "#FFFFFF",
+    "swatch_url": "https://www.uslumber.com/wp-content/uploads/2023/09/Westbury-Railing-Aluminum-Railing-Brochure.pdf",
+    "swatch_file": "railing_output/swatches/westbury_black-fine-texture_FFFFFF_3_4ba99338df.png",
+    "source": "pdf_page_3"
+  },
+  {
+    "brand": "Westbury",
+    "line": "Aluminum",
+    "color": "Ninety Bronze",
+    "hex": "#F6F6F6",
+    "swatch_url": "https://www.uslumber.com/wp-content/uploads/2023/09/Westbury-Railing-Aluminum-Railing-Brochure.pdf",
+    "swatch_file": "railing_output/swatches/westbury_ninety-bronze_F6F6F6_3_77722f1d7b.png",
+    "source": "pdf_page_3"
+  },
+  {
+    "brand": "Westbury",
+    "line": "Aluminum",
+    "color": "Bronze Fine Texture",
+    "hex": "#EEEEEE",
+    "swatch_url": "https://www.uslumber.com/wp-content/uploads/2023/09/Westbury-Railing-Aluminum-Railing-Brochure.pdf",
+    "swatch_file": "railing_output/swatches/westbury_bronze-fine-texture_EEEEEE_3_6d8770a06d.png",
+    "source": "pdf_page_3"
+  },
+  {
+    "brand": "Westbury",
+    "line": "Aluminum",
+    "color": "Gloss Beige",
+    "hex": "#F8F8F8",
+    "swatch_url": "https://www.uslumber.com/wp-content/uploads/2023/09/Westbury-Railing-Aluminum-Railing-Brochure.pdf",
+    "swatch_file": "railing_output/swatches/westbury_gloss-beige_F8F8F8_3_0e1443624f.png",
+    "source": "pdf_page_3"
+  },
+  {
+    "brand": "Westbury",
+    "line": "Aluminum",
+    "color": "Gloss White",
+    "hex": "#FAFAF6",
+    "swatch_url": "https://www.uslumber.com/wp-content/uploads/2023/09/Westbury-Railing-Aluminum-Railing-Brochure.pdf",
+    "swatch_file": "railing_output/swatches/westbury_gloss-white_FAFAF6_3_5aba31f583.png",
+    "source": "pdf_page_3"
+  },
+  {
+    "brand": "Westbury",
+    "line": "Aluminum",
+    "color": "White Fine Texture",
+    "hex": "#F6F5F3",
+    "swatch_url": "https://www.uslumber.com/wp-content/uploads/2023/09/Westbury-Railing-Aluminum-Railing-Brochure.pdf",
+    "swatch_file": "railing_output/swatches/westbury_white-fine-texture_F6F5F3_3_07ac46c2db.png",
+    "source": "pdf_page_3"
+  },
+  {
+    "brand": "Westbury",
+    "line": "Aluminum",
+    "color": "Brown Fine Texture",
+    "hex": "#FFFFFF",
+    "swatch_url": "https://www.uslumber.com/wp-content/uploads/2023/09/Westbury-Railing-Aluminum-Railing-Brochure.pdf",
+    "swatch_file": "railing_output/swatches/westbury_brown-fine-texture_FFFFFF_3_b38767ec38.png",
+    "source": "pdf_page_3"
+  },
+  {
+    "brand": "Westbury",
+    "line": "Aluminum",
+    "color": "Speckled Walnut",
+    "hex": "#FFFFFF",
+    "swatch_url": "https://www.uslumber.com/wp-content/uploads/2023/09/Westbury-Railing-Aluminum-Railing-Brochure.pdf",
+    "swatch_file": "railing_output/swatches/westbury_speckled-walnut_FFFFFF_3_dd25feaa4f.png",
+    "source": "pdf_page_3"
+  },
+  {
+    "brand": "Westbury",
+    "line": "Aluminum",
+    "color": "Sandy Shore",
+    "hex": "#E9E2D6",
+    "swatch_url": "https://www.uslumber.com/wp-content/uploads/2023/09/Westbury-Railing-Aluminum-Railing-Brochure.pdf",
+    "swatch_file": "railing_output/swatches/westbury_sandy-shore_E9E2D6_3_f3bef1037f.png",
+    "source": "pdf_page_3"
+  },
+  {
+    "brand": "Westbury",
+    "line": "Aluminum",
+    "color": "Grey Fine Texture",
+    "hex": "#FFFFFF",
+    "swatch_url": "https://www.uslumber.com/wp-content/uploads/2023/09/Westbury-Railing-Aluminum-Railing-Brochure.pdf",
+    "swatch_file": "railing_output/swatches/westbury_grey-fine-texture_FFFFFF_3_9f2dbd7ecd.png",
+    "source": "pdf_page_3"
+  },
+  {
+    "brand": "Westbury",
+    "line": "Aluminum",
+    "color": "Chocolate",
+    "hex": "#F6F6F6",
+    "swatch_url": "https://www.uslumber.com/wp-content/uploads/2023/09/Westbury-Railing-Aluminum-Railing-Brochure.pdf",
+    "swatch_file": "railing_output/swatches/westbury_chocolate_F6F6F6_3_0be7d877af.png",
+    "source": "pdf_page_3"
+  },
+  {
+    "brand": "Trex",
+    "line": "Select",
+    "color": "Charcoal Black",
+    "hex": null,
+    "swatch_url": "https://images.trex.com/is/image/trexcompany/sel-trail-classic-classic-white-charcoal-black-swatch?wid=300&fmt=png-alpha",
+    "swatch_file": null,
+    "source": "https://www.trex.com/products/railing/select/"
+  },
+  {
+    "brand": "Trex",
+    "line": "Select",
+    "color": "Burnished Bronze",
+    "hex": null,
+    "swatch_url": "https://images.trex.com/is/image/trexcompany/swatch-railing-burnished-bronze?wid=300&fmt=png-alpha",
+    "swatch_file": null,
+    "source": "https://www.trex.com/products/railing/select/"
+  },
+  {
+    "brand": "Trex",
+    "line": "Select",
+    "color": "Classic White",
+    "hex": null,
+    "swatch_url": "https://images.trex.com/is/image/trexcompany/sel-trail-classic-classic-white-charcoal-black-swatch?wid=300&fmt=png-alpha",
+    "swatch_file": null,
+    "source": "https://www.trex.com/products/railing/select/"
+  },
+  {
+    "brand": "Trex",
+    "line": "Transcend",
+    "color": "Charcoal Black",
+    "hex": "#242021",
+    "swatch_url": "https://images.trex.com/is/image/trexcompany/trex-composite-charcoal-black-swatch-2x-1?wid=300&fmt=png-alpha",
+    "swatch_file": "railing_output/swatches/trex_transcend_charcoal-black_242021.png",
+    "source": "https://www.trex.com/products/railing/transcend/"
+  },
+  {
+    "brand": "Trex",
+    "line": "Transcend",
+    "color": "Classic White",
+    "hex": null,
+    "swatch_url": "https://images.trex.com/is/image/trexcompany/swatch-trn-railing-classicwhite?wid=300&fmt=png-alpha",
+    "swatch_file": null,
+    "source": "https://www.trex.com/products/railing/transcend/"
+  },
+  {
+    "brand": "Trex",
+    "line": "Transcend",
+    "color": "Rope Swing",
+    "hex": null,
+    "swatch_url": "https://images.trex.com/is/image/trexcompany/swatch-trn-railing-ropeswing?wid=300&fmt=png-alpha",
+    "swatch_file": null,
+    "source": "https://www.trex.com/products/railing/transcend/"
+  },
+  {
+    "brand": "Trex",
+    "line": "Transcend",
+    "color": "Vintage Lantern",
+    "hex": null,
+    "swatch_url": "https://images.trex.com/is/image/trexcompany/swatch-trn-railing-vintagelantern?wid=300&fmt=png-alpha",
+    "swatch_file": null,
+    "source": "https://www.trex.com/products/railing/transcend/"
+  },
+  {
+    "brand": "Trex",
+    "line": "Signature",
+    "color": "Charcoal Black",
+    "hex": "#242021",
+    "swatch_url": "https://images.trex.com/is/image/trexcompany/trex-composite-charcoal-black-swatch-2x-1?wid=300&fmt=png-alpha",
+    "swatch_file": "railing_output/swatches/trex_signature_charcoal-black_242021.png",
+    "source": "https://www.trex.com/products/railing/signature/"
+  },
+  {
+    "brand": "Trex",
+    "line": "Signature",
+    "color": "Bronze",
+    "hex": null,
+    "swatch_url": "https://images.trex.com/is/image/trexcompany/swatch-railing-burnished-bronze?wid=300&fmt=png-alpha",
+    "swatch_file": null,
+    "source": "https://www.trex.com/products/railing/signature/"
+  },
+  {
+    "brand": "Trex",
+    "line": "Signature",
+    "color": "Classic White",
+    "hex": null,
+    "swatch_url": "https://images.trex.com/is/image/trexcompany/swatch-trn-railing-classicwhite?wid=300&fmt=png-alpha",
+    "swatch_file": null,
+    "source": "https://www.trex.com/products/railing/signature/"
+  },
+  {
+    "brand": "Trex",
+    "line": "Signature",
+    "color": "Black",
+    "hex": "#242021",
+    "swatch_url": "https://images.trex.com/is/image/trexcompany/trex-composite-charcoal-black-swatch-2x-1?wid=300&fmt=png-alpha",
+    "swatch_file": "railing_output/swatches/trex_signature_black_242021.png",
+    "source": "https://www.trex.com/products/railing/signature/"
+  },
+  {
+    "brand": "Trex",
+    "line": "Enhance",
+    "color": "Charcoal Black",
+    "hex": "#242021",
+    "swatch_url": "https://images.trex.com/is/image/trexcompany/trex-composite-charcoal-black-swatch-2x-1?wid=300&fmt=png-alpha",
+    "swatch_file": "railing_output/swatches/trex_enhance_charcoal-black_242021.png",
+    "source": "https://www.trex.com/products/railing/enhance/"
+  },
+  {
+    "brand": "Trex",
+    "line": "Enhance",
+    "color": "Classic White",
+    "hex": null,
+    "swatch_url": "https://images.trex.com/is/image/trexcompany/swatch-trn-railing-classicwhite?wid=300&fmt=png-alpha",
+    "swatch_file": null,
+    "source": "https://www.trex.com/products/railing/enhance/"
+  },
+  {
+    "brand": "Trex",
+    "line": "Enhance",
+    "color": "Saddle",
+    "hex": null,
+    "swatch_url": "https://images.trex.com/is/image/trexcompany/saddle-composite-railing-swatch?wid=300&fmt=png-alpha",
+    "swatch_file": null,
+    "source": "https://www.trex.com/products/railing/enhance/"
+  },
+  {
+    "brand": "TimberTech",
+    "line": "Railing",
+    "color": "Matte Black",
+    "hex": "#F0F0EF",
+    "swatch_url": "https://assets.timbertech.com/content/dam//wp-content/TimberTech-Rail-Order-Guide-2024.pdf",
+    "swatch_file": "railing_output/swatches/timbertech_matte-black_F0F0EF_3_8751a87ac5.png",
+    "source": "pdf_page_3"
+  },
+  {
+    "brand": "TimberTech",
+    "line": "Railing",
+    "color": "White",
+    "hex": "#FDFDFD",
+    "swatch_url": "https://assets.timbertech.com/content/dam//wp-content/TimberTech-Rail-Order-Guide-2024.pdf",
+    "swatch_file": "railing_output/swatches/timbertech_white_FDFDFD_7_37619fc130.png",
+    "source": "pdf_page_7"
+  }
+]

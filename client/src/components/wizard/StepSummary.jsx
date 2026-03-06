@@ -4,33 +4,33 @@ import { fireEvent } from '../../utils/analytics';
 
 // Step 7: Summary — review selections, save, share, email, request samples
 export default function StepSummary({ sel, env, designId, onSave, onRestart }) {
-  const [email,   setEmail]   = useState('');
-  const [saving,  setSaving]  = useState(false);
-  const [sent,    setSent]    = useState(false);
-  const [copied,  setCopied]  = useState(false);
+  const [email, setEmail] = useState('');
+  const [saving, setSaving] = useState(false);
+  const [sent, setSent] = useState(false);
+  const [copied, setCopied] = useState(false);
   const [savedId, setSavedId] = useState(designId || null);
 
   // Sample request form state
-  const [showSample,   setShowSample]   = useState(false);
-  const [sampleName,   setSampleName]   = useState('');
-  const [sampleEmail,  setSampleEmail]  = useState('');
-  const [samplePhone,  setSamplePhone]  = useState('');
-  const [sampleSent,   setSampleSent]   = useState(false);
+  const [showSample, setShowSample] = useState(false);
+  const [sampleName, setSampleName] = useState('');
+  const [sampleEmail, setSampleEmail] = useState('');
+  const [samplePhone, setSamplePhone] = useState('');
+  const [sampleSent, setSampleSent] = useState(false);
   const [sampleSaving, setSampleSaving] = useState(false);
 
-  const brand   = BRANDS.find(b => b.id === sel.brand);
-  const shape   = SHAPES.find(s => s.id === sel.shape);
+  const brand = BRANDS.find(b => b.id === sel.brand);
+  const shape = SHAPES.find(s => s.id === sel.shape);
   const railing = RAILING_STYLES.find(r => r.id === sel.railing);
-  const sqFt    = Math.round(sel.width * sel.depth);
+  const sqFt = Math.round(sel.width * sel.depth);
 
   const rows = [
-    { l: 'Deck Shape',   v: shape?.name },
-    { l: 'Dimensions',   v: `${sel.width}′ × ${sel.depth}′ (${sqFt} sq ft)` },
-    { l: 'Brand',        v: brand?.name },
-    { l: 'Collection',   v: sel.collection },
-    { l: 'Color',        v: sel.color?.n },
-    { l: 'Railing',      v: railing?.name },
-    { l: 'Stairs',       v: sel.stairs?.enabled ? `Yes · ${sel.stairs.steps} steps · ${sel.stairs.width}′ wide · ${sel.stairs.position?.replace('-',' ')}` : 'None' },
+    { l: 'Deck Shape', v: shape?.name },
+    { l: 'Dimensions', v: `${sel.width}′ × ${sel.depth}′ (${sqFt} sq ft)` },
+    { l: 'Brand', v: brand?.name },
+    { l: 'Collection', v: sel.collection },
+    { l: 'Color', v: sel.color?.n },
+    { l: 'Railing', v: railing?.name },
+    { l: 'Stairs', v: sel.stairs?.enabled ? `Yes · ${sel.stairs.steps} steps · ${sel.stairs.width}′ wide · ${sel.stairs.position?.replace('-', ' ')}` : 'None' },
   ].filter(r => r.v);
 
   // ── Save helper (idempotent) ────────────────────────────────
@@ -72,19 +72,19 @@ export default function StepSummary({ sel, env, designId, onSave, onRestart }) {
     if (id && !savedId) setSavedId(id);
     try {
       await fetch('/api/samples', {
-        method:  'POST',
+        method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
-          design_id:   id,
-          name:        sampleName,
-          email:       sampleEmail,
-          phone:       samplePhone,
-          color1_hex:  sel.color?.h,
+          design_id: id,
+          name: sampleName,
+          email: sampleEmail,
+          phone: samplePhone,
+          color1_hex: sel.color?.h,
           color1_name: sel.color?.n,
-          brand:       sel.brand,
+          brand: sel.brand,
         }),
       });
-    } catch {}
+    } catch { }
     setSampleSaving(false);
     setSampleSent(true);
     fireEvent('sample_request', { brand: sel.brand });
@@ -98,7 +98,7 @@ export default function StepSummary({ sel, env, designId, onSave, onRestart }) {
         Design Sent!
       </div>
       <p style={{ fontFamily: 'DM Sans,sans-serif', fontSize: '13px', color: '#6A6A68', marginBottom: '8px', lineHeight: '1.6' }}>
-        Sent to <strong>{email}</strong>.<br/>Bring to any Beisser Lumber location.
+        Sent to <strong>{email}</strong>.<br />Bring to any Beisser Lumber location.
       </p>
       {savedId && (
         <div style={{ marginBottom: '18px' }}>
@@ -140,8 +140,8 @@ export default function StepSummary({ sel, env, designId, onSave, onRestart }) {
         }}>
           <div style={{
             width: '46px', height: '46px', borderRadius: '7px',
-            background: sel.color.h, flexShrink: 0, boxShadow: '0 2px 8px rgba(0,0,0,0.24)',
-          }}/>
+            background: sel.color.img ? `url("${sel.color.img}") center/cover` : sel.color.h, flexShrink: 0, boxShadow: '0 2px 8px rgba(0,0,0,0.24)',
+          }} />
           <div>
             <div style={{ fontFamily: 'Playfair Display,serif', fontSize: '14px', color: '#1A1A18', marginBottom: '2px' }}>
               {sel.color.n}
@@ -259,16 +259,16 @@ export default function StepSummary({ sel, env, designId, onSave, onRestart }) {
             </div>
             {sel.color && (
               <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '10px', padding: '7px 10px', background: 'rgba(255,255,255,0.7)', borderRadius: '6px' }}>
-                <div style={{ width: '20px', height: '20px', borderRadius: '3px', background: sel.color.h, flexShrink: 0 }}/>
+                <div style={{ width: '20px', height: '20px', borderRadius: '3px', background: sel.color.img ? `url("${sel.color.img}") center/cover` : sel.color.h, flexShrink: 0 }} />
                 <span style={{ fontFamily: 'DM Sans,sans-serif', fontSize: '11px', color: '#4A3820', fontWeight: '600' }}>
                   {sel.color.n} — {brand?.name}
                 </span>
               </div>
             )}
             {[
-              { label: 'YOUR NAME *',      value: sampleName,  set: setSampleName,  type: 'text',  ph: 'Jane Smith' },
-              { label: 'EMAIL ADDRESS *',  value: sampleEmail, set: setSampleEmail, type: 'email', ph: 'jane@example.com' },
-              { label: 'PHONE (OPTIONAL)', value: samplePhone, set: setSamplePhone, type: 'tel',   ph: '(555) 000-0000' },
+              { label: 'YOUR NAME *', value: sampleName, set: setSampleName, type: 'text', ph: 'Jane Smith' },
+              { label: 'EMAIL ADDRESS *', value: sampleEmail, set: setSampleEmail, type: 'email', ph: 'jane@example.com' },
+              { label: 'PHONE (OPTIONAL)', value: samplePhone, set: setSamplePhone, type: 'tel', ph: '(555) 000-0000' },
             ].map(f => (
               <div key={f.label} style={{ marginBottom: '8px' }}>
                 <div style={{ fontFamily: 'DM Sans,sans-serif', fontSize: '9.5px', color: '#9A8060', fontWeight: '700', letterSpacing: '0.08em', marginBottom: '4px' }}>

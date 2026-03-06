@@ -8,13 +8,13 @@ let cache = null;
 function buildCache() {
   const rows = db.prepare('SELECT * FROM products WHERE active = 1 ORDER BY sort_order').all();
   const brandMeta = {
-    trex:         { bc: '#C4481E', tag: "America's #1 Decking Brand" },
-    fiberon:      { bc: '#1E5F98', tag: 'Good Wood for the Whole Neighborhood' },
-    timbertech:   { bc: '#103A5A', tag: 'Engineered to Last a Lifetime' },
-    deckorators:  { bc: '#A82820', tag: 'Pioneering Outdoor Living' },
-    wolf:         { bc: '#1E4A1E', tag: 'Premium Outdoor Living Products' },
-    moistureshield:{ bc: '#0E5A48', tag: 'Built for the Elements' },
-    armadillo:    { bc: '#5A3010', tag: 'Hard as Nails, Beautiful as Wood' },
+    trex: { bc: '#C4481E', tag: "America's #1 Decking Brand" },
+    fiberon: { bc: '#1E5F98', tag: 'Good Wood for the Whole Neighborhood' },
+    timbertech: { bc: '#103A5A', tag: 'Engineered to Last a Lifetime' },
+    deckorators: { bc: '#A82820', tag: 'Pioneering Outdoor Living' },
+    wolf: { bc: '#1E4A1E', tag: 'Premium Outdoor Living Products' },
+    moistureshield: { bc: '#0E5A48', tag: 'Built for the Elements' },
+    armadillo: { bc: '#5A3010', tag: 'Hard as Nails, Beautiful as Wood' },
   };
 
   const brandMap = {};
@@ -35,6 +35,8 @@ function buildCache() {
       id: row.id,
       n: row.color_name,
       h: row.hex,
+      img: row.image_url,
+      slug: row.slug,
     });
   }
 

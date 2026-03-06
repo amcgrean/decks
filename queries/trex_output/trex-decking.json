@@ -1,0 +1,206 @@
+{
+  "Enhance": [
+    {
+      "name": "Composite Decking",
+      "slug": "composite-decking",
+      "image_url": "https://images.trex.com/is/image/trexcompany/enh-3inch-four-scallop-002-rh-decking-profile-RHE35000:Smallest",
+      "hex": "#D0CCC8"
+    },
+    {
+      "name": "Contractor Download",
+      "slug": "contractor-download",
+      "image_url": "https://images.trex.com/is/image/trexcompany/enh-3inch-four-scallop-002-cc-decking-profile-CCE35000:Smallest",
+      "hex": "#CAC3BE"
+    },
+    {
+      "name": "Decking Decking Collections",
+      "slug": "decking-decking-collections",
+      "image_url": "https://images.trex.com/is/image/trexcompany/enh-3inch-four-scallop-001-tp-decking-profile-TPE35000:Smallest",
+      "hex": "#CFCDC9"
+    },
+    {
+      "name": "Fasteners",
+      "slug": "fasteners",
+      "image_url": "https://images.trex.com/is/image/trexcompany/enh-3halfinch-four-scallop-001-pb-grooved-decking-profile-PBE350000:Smallest",
+      "hex": "#D5D3D3"
+    },
+    {
+      "name": "For Professionals Become",
+      "slug": "for-professionals-become",
+      "image_url": "https://images.trex.com/is/image/trexcompany/enh-3inch-four-scallop-002-hy-decking-profile-HYE35000:Smallest",
+      "hex": "#D8D3CE"
+    },
+    {
+      "name": "Library Project Case",
+      "slug": "library-project-case",
+      "image_url": "https://images.trex.com/is/image/trexcompany/enh-3halfinch-four-scallop-001-gh-decking-profile:Smallest",
+      "hex": "#D8CBBF"
+    },
+    {
+      "name": "Resources Search Products",
+      "slug": "resources-search-products",
+      "image_url": "https://images.trex.com/is/image/trexcompany/enh-3inch-four-scallop-002-cs-decking-profile-CSE35000:Smallest",
+      "hex": "#C2C1C0"
+    },
+    {
+      "name": "Shop Trex Enhance",
+      "slug": "shop-trex-enhance",
+      "image_url": "https://images.trex.com/is/image/trexcompany/enh-3inch-four-scallop-002-fw-decking-profile-FWE35000:Smallest",
+      "hex": "#D5D5D4"
+    },
+    {
+      "name": "Studies All Pro",
+      "slug": "studies-all-pro",
+      "image_url": "https://images.trex.com/is/image/trexcompany/enh-3inch-four-scallop-002-sd-decking-profile-SDE35000:Smallest",
+      "hex": "#CCC1BC"
+    },
+    {
+      "name": "Trex",
+      "slug": "trex",
+      "image_url": "https://images.trex.com/is/image/trexcompany/enh-3inch-four-scallop-001-ts-decking-profile-TSE35000:Smallest",
+      "hex": "#CDC8C3"
+    }
+  ],
+  "Refuge PVC": [
+    {
+      "name": "Shop Trex Refuge",
+      "slug": "shop-trex-refuge",
+      "image_url": "https://images.trex.com/is/image/trexcompany/refuge-2065-mv-decking-sample-profile-MVO10620RS01:Smallest",
+      "hex": "#CCC3BB"
+    },
+    {
+      "name": "Trex",
+      "slug": "trex",
+      "image_url": "https://images.trex.com/is/image/trexcompany/refuge-2056-pr-decking-sample-profile-PRO10620RS01:Smallest",
+      "hex": "#C6C1BF"
+    }
+  ],
+  "Select": [
+    {
+      "name": "Actual Dimensions",
+      "slug": "actual-dimensions",
+      "image_url": "https://images.trex.com/is/image/trexcompany/sel-3inch-001-wl-decking-sample-profile-WLS235000:Smallest",
+      "hex": "#C1B6B2"
+    },
+    {
+      "name": "Fascia Add",
+      "slug": "fascia-add",
+      "image_url": "https://images.trex.com/is/image/trexcompany/sel-3inch-001-my-decking-sample-profile-MYS235000:Smallest",
+      "hex": "#D1CAC7"
+    },
+    {
+      "name": "Ready",
+      "slug": "ready",
+      "image_url": "https://images.trex.com/is/image/trexcompany/sel-3inch-001-sd-decking-sample-profile-SDS35000:Smallest",
+      "hex": "#C7BAB4"
+    },
+    {
+      "name": "Select",
+      "slug": "select",
+      "image_url": "https://images.trex.com/is/image/trexcompany/sel-3inch-001-ms-decking-sample-profile-MS2S35000:Smallest",
+      "hex": "#C9C6C6"
+    },
+    {
+      "name": "Universal White",
+      "slug": "universal-white",
+      "image_url": "https://images.trex.com/is/image/trexcompany/sel-3inch-001-pg-decking-sample-profile-PGS35000:Smallest",
+      "hex": "#C8C5C5"
+    }
+  ],
+  "Signature": [
+    {
+      "name": "Trex",
+      "slug": "trex",
+      "image_url": null,
+      "hex": null
+    },
+    {
+      "name": "Trex Signature",
+      "slug": "trex-signature",
+      "image_url": null,
+      "hex": null
+    }
+  ],
+  "Transcend": [
+    {
+      "name": "Havana Gold",
+      "slug": "havana-gold",
+      "image_url": "https://images.trex.com/is/image/trexcompany/trn-3inch-001-tt-decking-sample-profile-TTT35000:Smallest",
+      "hex": "#D1C1B8"
+    },
+    {
+      "name": "Island Mist",
+      "slug": "island-mist",
+      "image_url": "https://images.trex.com/is/image/trexcompany/trn-3inch-001-hg-decking-sample-profile-HGT35000:Smallest",
+      "hex": "#CABFB6"
+    },
+    {
+      "name": "Lava Rock",
+      "slug": "lava-rock",
+      "image_url": "https://images.trex.com/is/image/trexcompany/trn-3inch-001-sr-decking-sample-profile-SRT35000-1:Smallest",
+      "hex": "#B5AFAD"
+    },
+    {
+      "name": "Spiced Rum",
+      "slug": "spiced-rum",
+      "image_url": "https://images.trex.com/is/image/trexcompany/trn-3inch-001-lr-decking-sample-profile-LRT35000:Smallest",
+      "hex": "#B8B0AE"
+    },
+    {
+      "name": "Tiki Torch",
+      "slug": "tiki-torch",
+      "image_url": "https://images.trex.com/is/image/trexcompany/trn-3inch-001-rs-decking-sample-profile-RST35000:Smallest",
+      "hex": "#D6CCC5"
+    },
+    {
+      "name": "Transcend",
+      "slug": "transcend",
+      "image_url": "https://images.trex.com/is/image/trexcompany/trn-tropicals-3inch-001-im-decking-sample-profile-IMT35000:Smallest",
+      "hex": "#C3C0C0"
+    }
+  ],
+  "Transcend Lineage": [
+    {
+      "name": "Biscayne",
+      "slug": "biscayne",
+      "image_url": "https://images.trex.com/is/image/trexcompany/lin-3inch-001-ja-decking-sample-profile-JATL35000:Smallest",
+      "hex": "#CABEB5"
+    },
+    {
+      "name": "Carmel",
+      "slug": "carmel",
+      "image_url": "https://images.trex.com/is/image/trexcompany/lin-3inch-25151-cl-decking-sample-profile-CLTL35000:Smallest",
+      "hex": "#D6CAC4"
+    },
+    {
+      "name": "Island Mist",
+      "slug": "island-mist",
+      "image_url": "https://images.trex.com/is/image/trexcompany/lin-3inch-001-bc-decking-sample-profile-BCTL35000:Smallest",
+      "hex": "#C9C4C2"
+    },
+    {
+      "name": "Jasper",
+      "slug": "jasper",
+      "image_url": "https://images.trex.com/is/image/trexcompany/lin-3inch-001-ht-decking-sample-profile-HTTL35000:Smallest",
+      "hex": "#C9BBB5"
+    },
+    {
+      "name": "Rainier",
+      "slug": "rainier",
+      "image_url": "https://images.trex.com/is/image/trexcompany/lin-3inch-001-rn-decking-sample-profile-RNTL35000:Smallest",
+      "hex": "#CCC9C9"
+    },
+    {
+      "name": "Salt Flat",
+      "slug": "salt-flat",
+      "image_url": "https://images.trex.com/is/image/trexcompany/salt-flat-dream-home-2026-samples-35:Smallest",
+      "hex": "#D3CCC6"
+    },
+    {
+      "name": "Transcend Lineage",
+      "slug": "transcend-lineage",
+      "image_url": "https://images.trex.com/is/image/trexcompany/lin-3inch-001-im-decking-sample-profile-IMTL35000:Smallest",
+      "hex": "#C6C1C0"
+    }
+  ]
+}

@@ -1,0 +1,52 @@
+{
+    "Evolution": [
+        {
+            "name": "Bourbon",
+            "slug": "bourbon",
+            "image_url": "https://armadillodeck.com/wp-content/uploads/2022/08/Evolution-Swatch-1.jpg",
+            "hex": null
+        },
+        {
+            "name": "Firewood",
+            "slug": "firewood",
+            "image_url": "https://armadillodeck.com/wp-content/uploads/2022/08/Evolution-Swatch-2.jpg",
+            "hex": null
+        },
+        {
+            "name": "Linen",
+            "slug": "linen",
+            "image_url": "https://armadillodeck.com/wp-content/uploads/2022/08/Evolution-Swatch-3.jpg",
+            "hex": null
+        },
+        {
+            "name": "Mesa",
+            "slug": "mesa",
+            "image_url": "https://armadillodeck.com/wp-content/uploads/2022/08/Evolution-Swatch-4.jpg",
+            "hex": null
+        },
+        {
+            "name": "Steel Wool",
+            "slug": "steel-wool",
+            "image_url": "https://armadillodeck.com/wp-content/uploads/2022/08/Evolution-Swatch-5.jpg",
+            "hex": null
+        },
+        {
+            "name": "Twilight",
+            "slug": "twilight",
+            "image_url": "https://armadillodeck.com/wp-content/uploads/2022/08/Evolution-Swatch-6.jpg",
+            "hex": null
+        },
+        {
+            "name": "Silverstone",
+            "slug": "silverstone",
+            "image_url": "https://armadillodeck.com/wp-content/uploads/2022/08/Evolution-Swatch-7.jpg",
+            "hex": null
+        },
+        {
+            "name": "Sand Storm",
+            "slug": "sand-storm",
+            "image_url": "https://armadillodeck.com/wp-content/uploads/2022/08/Evolution-Swatch-8.jpg",
+            "hex": null
+        }
+    ]
+}

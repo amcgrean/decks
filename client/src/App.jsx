@@ -1,11 +1,11 @@
 import { useState, useEffect, useRef } from 'react';
 import Scene from './components/scene/Scene';
-import StepShape   from './components/wizard/StepShape';
-import StepSize    from './components/wizard/StepSize';
-import StepBrand   from './components/wizard/StepBrand';
-import StepColor   from './components/wizard/StepColor';
+import StepShape from './components/wizard/StepShape';
+import StepSize from './components/wizard/StepSize';
+import StepBrand from './components/wizard/StepBrand';
+import StepColor from './components/wizard/StepColor';
 import StepRailing from './components/wizard/StepRailing';
-import StepStairs  from './components/wizard/StepStairs';
+import StepStairs from './components/wizard/StepStairs';
 import StepSummary from './components/wizard/StepSummary';
 import EnvironmentPanel from './components/layout/EnvironmentPanel';
 import { BRANDS, VIEWS, STEP_LABELS } from './data/brands';
@@ -14,25 +14,25 @@ import { fireEvent } from './utils/analytics';
 const TOTAL_STEPS = 7; // 0–6
 
 export default function App() {
-  const [step,          setStep]   = useState(0);
-  const [view,          setView]   = useState('surface');
-  const [mobile,        setMobile] = useState(false);
+  const [step, setStep] = useState(0);
+  const [view, setView] = useState('surface');
+  const [mobile, setMobile] = useState(false);
   const [sceneExpanded, setExpand] = useState(false);
-  const [showEnv,       setShowEnv]= useState(false);
-  const [designId,      setDesignId] = useState(null);
+  const [showEnv, setShowEnv] = useState(false);
+  const [designId, setDesignId] = useState(null);
 
   const [sel, setSel] = useState({
-    shape:      'rectangle',
-    width:      12,
-    depth:      16,
-    brand:      null,
+    shape: 'rectangle',
+    width: 12,
+    depth: 16,
+    brand: null,
     collection: null,
-    color:      null,
-    railing:    'baluster',
+    color: null,
+    railing: 'baluster',
     stairs: {
-      enabled:  false,
-      steps:    3,
-      width:    5,
+      enabled: false,
+      steps: 3,
+      width: 5,
       position: 'front-center',
     },
   });
@@ -40,8 +40,8 @@ export default function App() {
   const [env, setEnv] = useState({
     houseStyle: 'craftsman',
     houseColor: '#F0E8D8',
-    showDoor:   true,
-    showGrass:  true,
+    showDoor: true,
+    showGrass: true,
   });
 
   // ── RESPONSIVE DETECTION ──────────────────────────────────
@@ -66,23 +66,23 @@ export default function App() {
       .then(d => {
         if (!d) return;
         setSel({
-          shape:      d.deck_shape  || 'rectangle',
-          width:      d.deck_width  || 12,
-          depth:      d.deck_depth  || 16,
-          brand:      d.product?.brand      || null,
+          shape: d.deck_shape || 'rectangle',
+          width: d.deck_width || 12,
+          depth: d.deck_depth || 16,
+          brand: d.product?.brand || null,
           collection: d.product?.collection || null,
-          color:      d.product ? { n: d.product.color_name, h: d.product.hex } : null,
-          railing:    d.railing_style || 'baluster',
-          stairs:     d.stair_config
+          color: d.product ? { n: d.product.color_name, h: d.product.hex } : null,
+          railing: d.railing_style || 'baluster',
+          stairs: d.stair_config
             ? { ...d.stair_config, enabled: !!d.has_stairs }
             : { enabled: !!d.has_stairs, steps: 3, width: 5, position: 'front-center' },
         });
-        if (d.house_style)     setEnv(e => ({ ...e, houseStyle: d.house_style }));
+        if (d.house_style) setEnv(e => ({ ...e, houseStyle: d.house_style }));
         if (d.house_color_hex) setEnv(e => ({ ...e, houseColor: d.house_color_hex }));
         setDesignId(id);
         setStep(6);
       })
-      .catch(() => {});
+      .catch(() => { });
   }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
   // ── SAVE DESIGN → /api/designs ────────────────────────────
@@ -90,18 +90,18 @@ export default function App() {
     if (designId) return designId;
     try {
       const res = await fetch('/api/designs', {
-        method:  'POST',
+        method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
-          house_style:     env.houseStyle,
+          house_style: env.houseStyle,
           house_color_hex: env.houseColor,
-          deck_shape:  sel.shape,
-          deck_width:  sel.width,
-          deck_depth:  sel.depth,
-          brand:       sel.brand,
-          color_hex:   sel.color?.h,
+          deck_shape: sel.shape,
+          deck_width: sel.width,
+          deck_depth: sel.depth,
+          brand: sel.brand,
+          color_hex: sel.color?.h,
           railing_style: sel.railing,
-          has_stairs:  sel.stairs?.enabled ? 1 : 0,
+          has_stairs: sel.stairs?.enabled ? 1 : 0,
           stair_config: sel.stairs,
           customer_email: customerEmail || null,
         }),
@@ -167,7 +167,7 @@ export default function App() {
       .find(c => c.h === color.h);
     fireEvent('color_select', {
       brand: sel.brand,
-      meta: JSON.stringify({ color: color.n, hex: color.h }),
+      meta: JSON.stringify({ color: color.n, hex: color.h, img: color.img }),
     });
   };
 
@@ -187,14 +187,14 @@ export default function App() {
   // ── WIZARD CONTENT ────────────────────────────────────────
   const renderStep = () => {
     switch (step) {
-      case 0: return <StepShape sel={sel.shape} onSel={v => upd('shape', v)}/>;
+      case 0: return <StepShape sel={sel.shape} onSel={v => upd('shape', v)} />;
       case 1: return (
         <StepSize
-          width={sel.width}  depth={sel.depth}
+          width={sel.width} depth={sel.depth}
           onWidth={v => upd('width', v)} onDepth={v => upd('depth', v)}
         />
       );
-      case 2: return <StepBrand sel={sel.brand} onSel={handleBrandSelect}/>;
+      case 2: return <StepBrand sel={sel.brand} onSel={handleBrandSelect} />;
       case 3: return (
         <StepColor
           brandId={sel.brand}
@@ -204,9 +204,9 @@ export default function App() {
           onSelColor={handleColorSelect}
         />
       );
-      case 4: return <StepRailing sel={sel.railing} onSel={v => upd('railing', v)}/>;
-      case 5: return <StepStairs stairs={sel.stairs} onStairs={v => upd('stairs', v)}/>;
-      case 6: return <StepSummary sel={sel} env={env} designId={designId} onSave={saveDesign} onRestart={restart}/>;
+      case 4: return <StepRailing sel={sel.railing} onSel={v => upd('railing', v)} />;
+      case 5: return <StepStairs stairs={sel.stairs} onStairs={v => upd('stairs', v)} />;
+      case 6: return <StepSummary sel={sel} env={env} designId={designId} onSave={saveDesign} onRestart={restart} />;
       default: return null;
     }
   };
@@ -245,8 +245,8 @@ export default function App() {
             }}>
               <div style={{
                 width: '9px', height: '9px', borderRadius: '50%',
-                background: sel.color.h, border: '1.5px solid rgba(255,255,255,0.4)', flexShrink: 0,
-              }}/>
+                background: sel.color.img ? `url("${sel.color.img}") center/cover` : sel.color.h, border: '1.5px solid rgba(255,255,255,0.4)', flexShrink: 0,
+              }} />
               <span style={{ fontFamily: 'DM Sans,sans-serif', fontSize: '10px', color: 'rgba(255,255,255,0.88)', fontWeight: '600' }}>
                 {sel.color.n}
               </span>
@@ -268,7 +268,7 @@ export default function App() {
               ⚙ Scene
             </button>
             {showEnv && (
-              <EnvironmentPanel env={env} onEnv={setEnv} onClose={() => setShowEnv(false)}/>
+              <EnvironmentPanel env={env} onEnv={setEnv} onClose={() => setShowEnv(false)} />
             )}
           </div>
 
@@ -357,7 +357,7 @@ export default function App() {
 
   const ProgressBar = () => (
     <div style={{ height: '3.5px', background: '#DDD5C4', flexShrink: 0 }}>
-      <div style={{ height: '100%', background: '#1E3A2C', width: `${progress}%`, transition: 'width 0.4s ease' }}/>
+      <div style={{ height: '100%', background: '#1E3A2C', width: `${progress}%`, transition: 'width 0.4s ease' }} />
     </div>
   );
 
@@ -377,7 +377,7 @@ export default function App() {
             fontFamily: 'DM Sans,sans-serif', fontSize: '10px', color: '#9A9898',
             letterSpacing: '0.12em', fontWeight: '600',
           }}>
-            {step < TOTAL_STEPS - 1 ? `STEP ${step+1} OF ${TOTAL_STEPS-1}` : 'COMPLETE'}
+            {step < TOTAL_STEPS - 1 ? `STEP ${step + 1} OF ${TOTAL_STEPS - 1}` : 'COMPLETE'}
           </span>
         </div>
         <h2 style={{
@@ -435,7 +435,7 @@ export default function App() {
           <div key={i} style={{
             width: step === i ? '15px' : '5.5px', height: '5.5px', borderRadius: '3px',
             background: i <= step ? '#1E3A2C' : '#D0C8BC', transition: 'all 0.24s',
-          }}/>
+          }} />
         ))}
       </div>
 
@@ -457,12 +457,12 @@ export default function App() {
   );
 
   const sceneProps = {
-    houseStyle:  env.houseStyle,
-    houseColor:  env.houseColor,
-    showDoor:    env.showDoor,
-    showGrass:   env.showGrass,
-    shape:       sel.shape,
-    deckColor:   sel.color,
+    houseStyle: env.houseStyle,
+    houseColor: env.houseColor,
+    showDoor: env.showDoor,
+    showGrass: env.showGrass,
+    shape: sel.shape,
+    deckColor: sel.color,
     railingStyle: sel.railing,
     view,
   };
@@ -473,19 +473,19 @@ export default function App() {
       <div style={{ display: 'flex', height: '100vh', overflow: 'hidden', fontFamily: 'DM Sans,sans-serif' }}>
         {/* Scene panel — 57% */}
         <div style={{ flex: '0 0 57%', display: 'flex', flexDirection: 'column', background: '#182218', overflow: 'hidden' }}>
-          <SceneHeader/>
-          <ViewTabs/>
+          <SceneHeader />
+          <ViewTabs />
           <div style={{ flex: 1, overflow: 'hidden', position: 'relative' }}>
-            <Scene {...sceneProps}/>
+            <Scene {...sceneProps} />
           </div>
-          <MetaStrip/>
+          <MetaStrip />
         </div>
 
         {/* Wizard panel — 43% */}
         <div style={{ flex: 1, display: 'flex', flexDirection: 'column', overflow: 'hidden', background: '#F0EAD8' }}>
-          <ProgressBar/>
-          <WizardContent/>
-          {step < TOTAL_STEPS - 1 && <NavBar/>}
+          <ProgressBar />
+          <WizardContent />
+          {step < TOTAL_STEPS - 1 && <NavBar />}
         </div>
       </div>
     );
@@ -500,24 +500,24 @@ export default function App() {
         background: '#182218', flexShrink: 0, display: 'flex', flexDirection: 'column',
         height: SCENE_H, transition: 'height 0.3s ease', overflow: 'hidden',
       }}>
-        <SceneHeader/>
-        <ViewTabs/>
+        <SceneHeader />
+        <ViewTabs />
         <div style={{ flex: 1, overflow: 'hidden' }}>
-          <Scene {...sceneProps}/>
+          <Scene {...sceneProps} />
         </div>
-        {!sceneExpanded && <MetaStrip/>}
+        {!sceneExpanded && <MetaStrip />}
       </div>
 
       {/* Progress bar */}
-      <ProgressBar/>
+      <ProgressBar />
 
       {/* Wizard — scrollable remaining space */}
       <div style={{ flex: 1, overflowY: 'auto', background: '#F0EAD8', paddingBottom: '72px' }}>
-        <WizardContent padBottom={80}/>
+        <WizardContent padBottom={80} />
       </div>
 
       {/* Fixed bottom nav */}
-      {step < TOTAL_STEPS - 1 && <NavBar fixed/>}
+      {step < TOTAL_STEPS - 1 && <NavBar fixed />}
     </div>
   );
 }

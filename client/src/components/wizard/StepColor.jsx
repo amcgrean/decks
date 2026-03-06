@@ -71,7 +71,7 @@ export default function StepColor({ brandId, selCol, selColor, onSelCol, onSelCo
                 transform: isSel ? 'scale(1.1)' : 'scale(1)',
               }}
             >
-              <div style={{ height: '50px', background: color.h }}/>
+              <div style={{ height: '50px', background: color.img ? `url("${color.img}") center/cover` : color.h }} />
               <div style={{ padding: '5px 3px', background: 'white', textAlign: 'center' }}>
                 <div style={{
                   fontSize: '9px', fontFamily: 'DM Sans,sans-serif', fontWeight: '600',
@@ -99,9 +99,9 @@ export default function StepColor({ brandId, selCol, selColor, onSelCol, onSelCo
         }}>
           <div style={{
             width: '32px', height: '32px', borderRadius: '5px',
-            background: selColor.h, flexShrink: 0,
+            background: selColor.img ? `url("${selColor.img}") center/cover` : selColor.h, flexShrink: 0,
             boxShadow: '0 2px 6px rgba(0,0,0,0.2)',
-          }}/>
+          }} />
           <div>
             <div style={{ fontFamily: 'Playfair Display,serif', fontSize: '13px', color: '#1A1A18' }}>
               {selColor.n}

@@ -1,0 +1,168 @@
+{
+  "Voyage": [
+    {
+      "name": "Costa\nCosta",
+      "slug": "costa-costa",
+      "collection": "Voyage",
+      "product_url": "https://www.deckorators.com/products/voyage-decking",
+      "image_url": null,
+      "hex": null
+    },
+    {
+      "name": "Sierra\nKhaya",
+      "slug": "sierra-khaya",
+      "collection": "Voyage",
+      "product_url": "https://www.deckorators.com/products/voyage-decking",
+      "image_url": null,
+      "hex": null
+    },
+    {
+      "name": "Tundra\nSedona",
+      "slug": "tundra-sedona",
+      "collection": "Voyage",
+      "product_url": "https://www.deckorators.com/products/voyage-decking",
+      "image_url": null,
+      "hex": null
+    },
+    {
+      "name": "Mesa\nProduct",
+      "slug": "mesa-product",
+      "collection": "Voyage",
+      "product_url": "https://www.deckorators.com/products/voyage-decking",
+      "image_url": null,
+      "hex": null
+    },
+    {
+      "name": "Costa",
+      "slug": "costa",
+      "collection": "Voyage",
+      "product_url": "https://www.deckorators.com/products/voyage-decking",
+      "image_url": "https://www.deckorators.com/cdn/shop/files/deckorators-voyage-decking-costa-close-up-boards-installed.jpg?crop=center&height=20&v=1743429327&width=20",
+      "hex": "#897461"
+    },
+    {
+      "name": "Sierra",
+      "slug": "sierra",
+      "collection": "Voyage",
+      "product_url": "https://www.deckorators.com/products/voyage-decking",
+      "image_url": "https://www.deckorators.com/cdn/shop/files/deckorators-voyage-decking-sierra-close-up-boards-installed.jpg?crop=center&height=20&v=1743429327&width=20",
+      "hex": "#5D5C5D"
+    },
+    {
+      "name": "Khaya",
+      "slug": "khaya",
+      "collection": "Voyage",
+      "product_url": "https://www.deckorators.com/products/voyage-decking",
+      "image_url": "https://www.deckorators.com/cdn/shop/files/deckorators-voyage-decking-khaya-close-up-boards-installed.jpg?crop=center&height=20&v=1743429327&width=20",
+      "hex": "#594537"
+    },
+    {
+      "name": "Tundra",
+      "slug": "tundra",
+      "collection": "Voyage",
+      "product_url": "https://www.deckorators.com/products/voyage-decking",
+      "image_url": "https://www.deckorators.com/cdn/shop/files/deckorators-voyage-decking-tundra-close-up-boards-installed.jpg?crop=center&height=20&v=1743429327&width=20",
+      "hex": "#8B8A88"
+    },
+    {
+      "name": "Sedona",
+      "slug": "sedona",
+      "collection": "Voyage",
+      "product_url": "https://www.deckorators.com/products/voyage-decking",
+      "image_url": "https://www.deckorators.com/cdn/shop/files/deckorators-voyage-decking-sedona-close-up-boards-installed.jpg?crop=center&height=20&v=1743429327&width=20",
+      "hex": "#835B3A"
+    },
+    {
+      "name": "Mesa",
+      "slug": "mesa",
+      "collection": "Voyage",
+      "product_url": "https://www.deckorators.com/products/voyage-decking",
+      "image_url": "https://www.deckorators.com/cdn/shop/files/deckorators-voyage-decking-mesa-close-up-boards-installed.jpg?crop=center&height=20&v=1743429327&width=20",
+      "hex": "#785744"
+    }
+  ],
+  "Summit": [
+    {
+      "name": "Glacier\nGlacier",
+      "slug": "glacier-glacier",
+      "collection": "Summit",
+      "product_url": "https://www.deckorators.com/products/summit-decking",
+      "image_url": null,
+      "hex": null
+    },
+    {
+      "name": "Boulder\nCliffside",
+      "slug": "boulder-cliffside",
+      "collection": "Summit",
+      "product_url": "https://www.deckorators.com/products/summit-decking",
+      "image_url": null,
+      "hex": null
+    },
+    {
+      "name": "Glacier",
+      "slug": "glacier",
+      "collection": "Summit",
+      "product_url": "https://www.deckorators.com/products/summit-decking",
+      "image_url": "https://www.deckorators.com/cdn/shop/files/deckorators-summit-decking-glacier-deck-board-close-up.jpg?crop=center&height=20&v=1730732721&width=20",
+      "hex": "#908879"
+    },
+    {
+      "name": "Boulder",
+      "slug": "boulder",
+      "collection": "Summit",
+      "product_url": "https://www.deckorators.com/products/summit-decking",
+      "image_url": "https://www.deckorators.com/cdn/shop/files/deckorators-summit-decking-boulder-deck-board-close-up.jpg?crop=center&height=20&v=1771275462&width=20",
+      "hex": "#7F654C"
+    },
+    {
+      "name": "Cliffside",
+      "slug": "cliffside",
+      "collection": "Summit",
+      "product_url": "https://www.deckorators.com/products/summit-decking",
+      "image_url": "https://www.deckorators.com/cdn/shop/files/deckorators-summit-decking-cliffside-deck-board-close-up.jpg?crop=center&height=20&v=1771275462&width=20",
+      "hex": "#AA967B"
+    }
+  ],
+  "Venture": [
+    {
+      "name": "Saltwater\nSaltwater",
+      "slug": "saltwater-saltwater",
+      "collection": "Venture",
+      "product_url": "https://www.deckorators.com/products/venture-decking",
+      "image_url": null,
+      "hex": null
+    },
+    {
+      "name": "Sandbar\nShoreline",
+      "slug": "sandbar-shoreline",
+      "collection": "Venture",
+      "product_url": "https://www.deckorators.com/products/venture-decking",
+      "image_url": null,
+      "hex": null
+    },
+    {
+      "name": "Saltwater",
+      "slug": "saltwater",
+      "collection": "Venture",
+      "product_url": "https://www.deckorators.com/products/venture-decking",
+      "image_url": "https://www.deckorators.com/cdn/shop/files/deckorators-venture-decking-saltwater-close-up-boards-installed.jpg?crop=center&height=20&v=1701809922&width=20",
+      "hex": "#82807F"
+    },
+    {
+      "name": "Sandbar",
+      "slug": "sandbar",
+      "collection": "Venture",
+      "product_url": "https://www.deckorators.com/products/venture-decking",
+      "image_url": "https://www.deckorators.com/cdn/shop/files/deckorators-venture-decking-sandbar-close-up-boards-installed.jpg?crop=center&height=20&v=1760034285&width=20",
+      "hex": "#78614F"
+    },
+    {
+      "name": "Shoreline",
+      "slug": "shoreline",
+      "collection": "Venture",
+      "product_url": "https://www.deckorators.com/products/venture-decking",
+      "image_url": "https://www.deckorators.com/cdn/shop/files/deckorators-venture-decking-shoreline-white-house.jpg?crop=center&height=20&v=1760034285&width=20",
+      "hex": "#8C7F6F"
+    }
+  ]
+}

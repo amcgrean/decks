@@ -1,0 +1,124 @@
+{
+  "version": 1,
+  "structures": [
+    {
+      "id": "aluminum_baluster",
+      "label": "Standard Baluster",
+      "notes": "Typical Westbury / Trex / TimberTech vertical balusters.",
+      "infill": "baluster",
+      "defaults": {
+        "post_w": 14,
+        "top_h": 14,
+        "bottom_h": 10,
+        "gap_top": 20,
+        "gap_bottom": 22
+      }
+    },
+    {
+      "id": "aluminum_square_baluster_dense",
+      "label": "Square Baluster (Dense)",
+      "notes": "Slightly denser baluster spacing (common in aluminum).",
+      "infill": "baluster_dense",
+      "defaults": {
+        "post_w": 14,
+        "top_h": 14,
+        "bottom_h": 10,
+        "gap_top": 20,
+        "gap_bottom": 22
+      }
+    },
+    {
+      "id": "cocktail_rail",
+      "label": "Cocktail / Drink Rail",
+      "notes": "Adds a wider top rail cap (Trex offers Cocktail Rail kits).",
+      "infill": "baluster",
+      "defaults": {
+        "post_w": 14,
+        "top_h": 18,
+        "bottom_h": 10,
+        "gap_top": 18,
+        "gap_bottom": 22,
+        "cap_h": 10
+      }
+    },
+    {
+      "id": "cable_horizontal",
+      "label": "Horizontal Cable",
+      "notes": "Horizontal cable infill; apply to metal/composite/wood frames.",
+      "infill": "cable_horizontal",
+      "defaults": {
+        "post_w": 14,
+        "top_h": 14,
+        "bottom_h": 10,
+        "gap_top": 20,
+        "gap_bottom": 22
+      }
+    },
+    {
+      "id": "cable_vertical",
+      "label": "Vertical Cable",
+      "notes": "Vertical cable infill (Westbury VertiCable style).",
+      "infill": "cable_vertical",
+      "defaults": {
+        "post_w": 14,
+        "top_h": 14,
+        "bottom_h": 10,
+        "gap_top": 20,
+        "gap_bottom": 22
+      }
+    },
+    {
+      "id": "glass_framed",
+      "label": "Glass (Framed Panel)",
+      "notes": "Framed glass panel look (Trex/TimberTech options).",
+      "infill": "glass_panel",
+      "defaults": {
+        "post_w": 14,
+        "top_h": 14,
+        "bottom_h": 10,
+        "gap_top": 20,
+        "gap_bottom": 22
+      }
+    },
+    {
+      "id": "glass_frameless",
+      "label": "Glass (Frameless Base Shoe)",
+      "notes": "IG Railing style: frameless glass with base hardware.",
+      "infill": "glass_frameless",
+      "defaults": {
+        "post_w": 0,
+        "top_h": 0,
+        "bottom_h": 12,
+        "gap_top": 0,
+        "gap_bottom": 12
+      }
+    },
+    {
+      "id": "wood_traditional",
+      "label": "Wood Traditional",
+      "notes": "Cedar / treated look with heavier members.",
+      "infill": "baluster_wood",
+      "defaults": {
+        "post_w": 18,
+        "top_h": 18,
+        "bottom_h": 12,
+        "gap_top": 18,
+        "gap_bottom": 18
+      }
+    }
+  ],
+  "how_to_apply": {
+    "base_class": "railing",
+    "infill_classes": {
+      "baluster": "railing--infill-baluster",
+      "baluster_dense": "railing--infill-baluster-dense",
+      "cable_horizontal": "railing--infill-cable-horizontal",
+      "cable_vertical": "railing--infill-cable-vertical",
+      "glass_panel": "railing--infill-glass",
+      "glass_frameless": "railing--frameless railing--infill-glass",
+      "baluster_wood": "railing--wood railing--infill-baluster"
+    },
+    "optional_cap": "Include <div class='railing__cap'/> and add class 'railing--has-cap' (you can enable via JS)."
+  },
+  "html_skeleton": "<div class=\"railing railing--infill-baluster\">\n  <div class=\"railing__post railing__post--left\"></div>\n  <div class=\"railing__post railing__post--right\"></div>\n  <div class=\"railing__cap\"></div>\n  <div class=\"railing__top\"></div>\n  <div class=\"railing__bottom\"></div>\n  <div class=\"railing__infill\"></div>\n</div>"
+}

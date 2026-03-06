@@ -1,0 +1,22 @@
+/* Auto-generated railing palette tokens */
+:root {
+  --rail-westbury-aluminum-black-fine-texture: #FFFFFF;
+  --rail-westbury-aluminum-ninety-bronze: #F6F6F6;
+  --rail-westbury-aluminum-bronze-fine-texture: #EEEEEE;
+  --rail-westbury-aluminum-gloss-beige: #F8F8F8;
+  --rail-westbury-aluminum-gloss-white: #FAFAF6;
+  --rail-westbury-aluminum-white-fine-texture: #F6F5F3;
+  --rail-westbury-aluminum-brown-fine-texture: #FFFFFF;
+  --rail-westbury-aluminum-speckled-walnut: #FFFFFF;
+  --rail-westbury-aluminum-sandy-shore: #E9E2D6;
+  --rail-westbury-aluminum-grey-fine-texture: #FFFFFF;
+  --rail-westbury-aluminum-chocolate: #F6F6F6;
+  --rail-trex-transcend-charcoal-black: #242021;
+  --rail-trex-signature-charcoal-black: #242021;
+  --rail-trex-signature-black: #242021;
+  --rail-trex-enhance-charcoal-black: #242021;
+  --rail-timbertech-railing-matte-black: #F0F0EF;
+  --rail-timbertech-railing-white: #FDFDFD;
+}
+
+.rail-swatch { width: 64px; height: 32px; border-radius: 6px; border: 1px solid rgba(0,0,0,0.12); }

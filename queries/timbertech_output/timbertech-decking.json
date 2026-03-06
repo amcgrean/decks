@@ -1,0 +1,328 @@
+{
+  "Composite Terrain Plus Collection": [
+    {
+      "name": "Dark Oak",
+      "slug": "dark-oak",
+      "collection": "Composite Terrain Plus Collection",
+      "product_url": "https://www.timbertech.com/product/composite-terrain-plus-collection/?attribute_pa_color=dark-oak",
+      "image_url": "https://www.timbertech.com/product/composite-terrain-plus-collection/media_166085ddea30a130f44ea138b57d8a3ca4c1c3cb2.jpg?width=1200&format=pjpg&optimize=medium",
+      "hex": "#7B6348"
+    },
+    {
+      "name": "Natural White Oak",
+      "slug": "natural-white-oak",
+      "collection": "Composite Terrain Plus Collection",
+      "product_url": "https://www.timbertech.com/product/composite-terrain-plus-collection/?attribute_pa_color=natural-white-oak",
+      "image_url": "https://www.timbertech.com/product/composite-terrain-plus-collection/media_166085ddea30a130f44ea138b57d8a3ca4c1c3cb2.jpg?width=1200&format=pjpg&optimize=medium",
+      "hex": "#7B6348"
+    },
+    {
+      "name": "Weathered Oak",
+      "slug": "weathered-oak",
+      "collection": "Composite Terrain Plus Collection",
+      "product_url": "https://www.timbertech.com/product/composite-terrain-plus-collection/?attribute_pa_color=weathered-oak",
+      "image_url": "https://www.timbertech.com/product/composite-terrain-plus-collection/media_166085ddea30a130f44ea138b57d8a3ca4c1c3cb2.jpg?width=1200&format=pjpg&optimize=medium",
+      "hex": "#7B6348"
+    }
+  ],
+  "Edge Premier Collection": [
+    {
+      "name": "Dark Teak",
+      "slug": "dark-teak",
+      "collection": "Edge Premier Collection",
+      "product_url": "https://www.timbertech.com/product/edge-premier-collection/?attribute_pa_color=dark-teak",
+      "image_url": "https://www.timbertech.com/product/edge-premier-collection/media_1ae40a703e1e9e6230500f68c83c30c351628e0aa.jpg?width=1200&format=pjpg&optimize=medium",
+      "hex": "#60453D"
+    }
+  ],
+  "Edge Prime Collection": [
+    {
+      "name": "Maritime Gray",
+      "slug": "maritime-gray",
+      "collection": "Edge Prime Collection",
+      "product_url": "https://www.timbertech.com/product/edge-prime-collection/?attribute_pa_color=maritime-gray",
+      "image_url": "https://www.timbertech.com/product/edge-prime-collection/media_1b9a35efa0c6c3c5f5e40620f50b277487364ea1e.jpg?width=1200&format=pjpg&optimize=medium",
+      "hex": "#6C6C6A"
+    }
+  ],
+  "Edge Prime Plus Collection": [
+    {
+      "name": "Coconut Husk",
+      "slug": "coconut-husk",
+      "collection": "Edge Prime Plus Collection",
+      "product_url": "https://www.timbertech.com/product/edge-prime-plus-collection/?attribute_pa_color=coconut-husk",
+      "image_url": "https://www.timbertech.com/product/edge-prime-plus-collection/media_145edf35c6afd801492d4706aae2ca3196cd6c0fe.jpg?width=1200&format=pjpg&optimize=medium",
+      "hex": "#916B45"
+    },
+    {
+      "name": "Dark Cocoa",
+      "slug": "dark-cocoa",
+      "collection": "Edge Prime Plus Collection",
+      "product_url": "https://www.timbertech.com/product/edge-prime-plus-collection/?attribute_pa_color=dark-cocoa",
+      "image_url": "https://www.timbertech.com/product/edge-prime-plus-collection/media_145edf35c6afd801492d4706aae2ca3196cd6c0fe.jpg?width=1200&format=pjpg&optimize=medium",
+      "hex": "#916B45"
+    },
+    {
+      "name": "Sea Salt Gray",
+      "slug": "sea-salt-gray",
+      "collection": "Edge Prime Plus Collection",
+      "product_url": "https://www.timbertech.com/product/edge-prime-plus-collection/?attribute_pa_color=sea-salt-gray",
+      "image_url": "https://www.timbertech.com/product/edge-prime-plus-collection/media_145edf35c6afd801492d4706aae2ca3196cd6c0fe.jpg?width=1200&format=pjpg&optimize=medium",
+      "hex": "#916B45"
+    }
+  ],
+  "Harvest Collection": [
+    {
+      "name": "Brownstone",
+      "slug": "brownstone",
+      "collection": "Harvest Collection",
+      "product_url": "https://www.timbertech.com/product/azek-harvest-collection/?attribute_pa_color=brownstone",
+      "image_url": "https://www.timbertech.com/product/azek-harvest-collection/media_1287db99027e0d2714b6dd226facd9e88a361dc63.webp?width=1200&format=pjpg&optimize=medium",
+      "hex": "#646249"
+    },
+    {
+      "name": "Kona",
+      "slug": "kona",
+      "collection": "Harvest Collection",
+      "product_url": "https://www.timbertech.com/product/azek-harvest-collection/?attribute_pa_color=kona",
+      "image_url": "https://www.timbertech.com/product/azek-harvest-collection/media_1287db99027e0d2714b6dd226facd9e88a361dc63.webp?width=1200&format=pjpg&optimize=medium",
+      "hex": "#646249"
+    },
+    {
+      "name": "Slate Gray",
+      "slug": "slate-gray",
+      "collection": "Harvest Collection",
+      "product_url": "https://www.timbertech.com/product/azek-harvest-collection/?attribute_pa_color=slate-gray",
+      "image_url": "https://www.timbertech.com/product/azek-harvest-collection/media_1287db99027e0d2714b6dd226facd9e88a361dc63.webp?width=1200&format=pjpg&optimize=medium",
+      "hex": "#646249"
+    }
+  ],
+  "Harvest Plus Collection": [
+    {
+      "name": "Timber Gray",
+      "slug": "timber-gray",
+      "collection": "Harvest Plus Collection",
+      "product_url": "https://www.timbertech.com/product/harvest-plus-collection/?attribute_pa_color=timber-gray",
+      "image_url": "https://www.timbertech.com/product/harvest-plus-collection/media_144f9309479b286af242b00bcda3c5d4576e9515e.webp?width=1200&format=pjpg&optimize=medium",
+      "hex": "#D1C0A4"
+    },
+    {
+      "name": "Toasted Wheat",
+      "slug": "toasted-wheat",
+      "collection": "Harvest Plus Collection",
+      "product_url": "https://www.timbertech.com/product/harvest-plus-collection/?attribute_pa_color=toasted-wheat",
+      "image_url": "https://www.timbertech.com/product/harvest-plus-collection/media_144f9309479b286af242b00bcda3c5d4576e9515e.webp?width=1200&format=pjpg&optimize=medium",
+      "hex": "#D1C0A4"
+    }
+  ],
+  "Landmark Collection": [
+    {
+      "name": "American Walnut",
+      "slug": "american-walnut",
+      "collection": "Landmark Collection",
+      "product_url": "https://www.timbertech.com/product/azek-landmark-collection/?attribute_pa_color=american-walnut",
+      "image_url": "https://www.timbertech.com/product/azek-landmark-collection/media_15d05d26ae818e583162f69b88f773d36352dcabe.jpg?width=1200&format=pjpg&optimize=medium",
+      "hex": "#65625F"
+    },
+    {
+      "name": "Boardwalk",
+      "slug": "boardwalk",
+      "collection": "Landmark Collection",
+      "product_url": "https://www.timbertech.com/product/azek-landmark-collection/?attribute_pa_color=boardwalk",
+      "image_url": "https://www.timbertech.com/product/azek-landmark-collection/media_15d05d26ae818e583162f69b88f773d36352dcabe.jpg?width=1200&format=pjpg&optimize=medium",
+      "hex": "#65625F"
+    },
+    {
+      "name": "Castle Gate",
+      "slug": "castle-gate",
+      "collection": "Landmark Collection",
+      "product_url": "https://www.timbertech.com/product/azek-landmark-collection/?attribute_pa_color=castle-gate",
+      "image_url": "https://www.timbertech.com/product/azek-landmark-collection/media_15d05d26ae818e583162f69b88f773d36352dcabe.jpg?width=1200&format=pjpg&optimize=medium",
+      "hex": "#65625F"
+    },
+    {
+      "name": "French White Oak",
+      "slug": "french-white-oak",
+      "collection": "Landmark Collection",
+      "product_url": "https://www.timbertech.com/product/azek-landmark-collection/?attribute_pa_color=french-white-oak",
+      "image_url": "https://www.timbertech.com/product/azek-landmark-collection/media_15d05d26ae818e583162f69b88f773d36352dcabe.jpg?width=1200&format=pjpg&optimize=medium",
+      "hex": "#65625F"
+    }
+  ],
+  "Legacy Collection": [
+    {
+      "name": "Ashwood",
+      "slug": "ashwood",
+      "collection": "Legacy Collection",
+      "product_url": "https://www.timbertech.com/product/pro-legacy-collection/?attribute_pa_color=ashwood",
+      "image_url": "https://www.timbertech.com/product/pro-legacy-collection/media_134ffd9fb7b8b0c67d0d96c52e5b6a5836fbc25fb.webp?width=1200&format=pjpg&optimize=medium",
+      "hex": "#B5A792"
+    },
+    {
+      "name": "Espresso",
+      "slug": "espresso",
+      "collection": "Legacy Collection",
+      "product_url": "https://www.timbertech.com/product/pro-legacy-collection/?attribute_pa_color=espresso",
+      "image_url": "https://www.timbertech.com/product/pro-legacy-collection/media_134ffd9fb7b8b0c67d0d96c52e5b6a5836fbc25fb.webp?width=1200&format=pjpg&optimize=medium",
+      "hex": "#B5A792"
+    },
+    {
+      "name": "Mocha",
+      "slug": "mocha",
+      "collection": "Legacy Collection",
+      "product_url": "https://www.timbertech.com/product/pro-legacy-collection/?attribute_pa_color=mocha",
+      "image_url": "https://www.timbertech.com/product/pro-legacy-collection/media_134ffd9fb7b8b0c67d0d96c52e5b6a5836fbc25fb.webp?width=1200&format=pjpg&optimize=medium",
+      "hex": "#B5A792"
+    },
+    {
+      "name": "Pecan",
+      "slug": "pecan",
+      "collection": "Legacy Collection",
+      "product_url": "https://www.timbertech.com/product/pro-legacy-collection/?attribute_pa_color=pecan",
+      "image_url": "https://www.timbertech.com/product/pro-legacy-collection/media_134ffd9fb7b8b0c67d0d96c52e5b6a5836fbc25fb.webp?width=1200&format=pjpg&optimize=medium",
+      "hex": "#B5A792"
+    },
+    {
+      "name": "Tigerwood",
+      "slug": "tigerwood",
+      "collection": "Legacy Collection",
+      "product_url": "https://www.timbertech.com/product/pro-legacy-collection/?attribute_pa_color=tigerwood",
+      "image_url": "https://www.timbertech.com/product/pro-legacy-collection/media_134ffd9fb7b8b0c67d0d96c52e5b6a5836fbc25fb.webp?width=1200&format=pjpg&optimize=medium",
+      "hex": "#B5A792"
+    },
+    {
+      "name": "Whitewash Cedar",
+      "slug": "whitewash-cedar",
+      "collection": "Legacy Collection",
+      "product_url": "https://www.timbertech.com/product/pro-legacy-collection/?attribute_pa_color=whitewash-cedar",
+      "image_url": "https://www.timbertech.com/product/pro-legacy-collection/media_134ffd9fb7b8b0c67d0d96c52e5b6a5836fbc25fb.webp?width=1200&format=pjpg&optimize=medium",
+      "hex": "#B5A792"
+    }
+  ],
+  "Reserve Collection": [
+    {
+      "name": "Antique Leather",
+      "slug": "antique-leather",
+      "collection": "Reserve Collection",
+      "product_url": "https://www.timbertech.com/product/pro-reserve-collection/?attribute_pa_color=antique-leather",
+      "image_url": "https://www.timbertech.com/product/pro-reserve-collection/media_199934fd6b02c17fc7dabc167409895e26b330fbe.webp?width=1200&format=pjpg&optimize=medium",
+      "hex": "#8F785E"
+    },
+    {
+      "name": "Dark Roast",
+      "slug": "dark-roast",
+      "collection": "Reserve Collection",
+      "product_url": "https://www.timbertech.com/product/pro-reserve-collection/?attribute_pa_color=dark-roast",
+      "image_url": "https://www.timbertech.com/product/pro-reserve-collection/media_199934fd6b02c17fc7dabc167409895e26b330fbe.webp?width=1200&format=pjpg&optimize=medium",
+      "hex": "#8F785E"
+    },
+    {
+      "name": "Driftwood",
+      "slug": "driftwood",
+      "collection": "Reserve Collection",
+      "product_url": "https://www.timbertech.com/product/pro-reserve-collection/?attribute_pa_color=driftwood",
+      "image_url": "https://www.timbertech.com/product/pro-reserve-collection/media_199934fd6b02c17fc7dabc167409895e26b330fbe.webp?width=1200&format=pjpg&optimize=medium",
+      "hex": "#8F785E"
+    },
+    {
+      "name": "Reclaimed Chestnut",
+      "slug": "reclaimed-chestnut",
+      "collection": "Reserve Collection",
+      "product_url": "https://www.timbertech.com/product/pro-reserve-collection/?attribute_pa_color=reclaimed-chestnut",
+      "image_url": "https://www.timbertech.com/product/pro-reserve-collection/media_199934fd6b02c17fc7dabc167409895e26b330fbe.webp?width=1200&format=pjpg&optimize=medium",
+      "hex": "#8F785E"
+    }
+  ],
+  "Terrain Collection": [
+    {
+      "name": "Brown Oak",
+      "slug": "brown-oak",
+      "collection": "Terrain Collection",
+      "product_url": "https://www.timbertech.com/product/pro-terrain-collection/?attribute_pa_color=brown-oak",
+      "image_url": "https://www.timbertech.com/product/pro-terrain-collection/media_100b1cefd4057656acbdb6c9c678c7032489d2310.jpg?width=1200&format=pjpg&optimize=medium",
+      "hex": "#6C4C3C"
+    },
+    {
+      "name": "Rustic Elm",
+      "slug": "rustic-elm",
+      "collection": "Terrain Collection",
+      "product_url": "https://www.timbertech.com/product/pro-terrain-collection/?attribute_pa_color=rustic-elm",
+      "image_url": "https://www.timbertech.com/product/pro-terrain-collection/media_100b1cefd4057656acbdb6c9c678c7032489d2310.jpg?width=1200&format=pjpg&optimize=medium",
+      "hex": "#6C4C3C"
+    },
+    {
+      "name": "Sandy Birch",
+      "slug": "sandy-birch",
+      "collection": "Terrain Collection",
+      "product_url": "https://www.timbertech.com/product/pro-terrain-collection/?attribute_pa_color=sandy-birch",
+      "image_url": "https://www.timbertech.com/product/pro-terrain-collection/media_100b1cefd4057656acbdb6c9c678c7032489d2310.jpg?width=1200&format=pjpg&optimize=medium",
+      "hex": "#6C4C3C"
+    },
+    {
+      "name": "Silver Maple",
+      "slug": "silver-maple",
+      "collection": "Terrain Collection",
+      "product_url": "https://www.timbertech.com/product/pro-terrain-collection/?attribute_pa_color=silver-maple",
+      "image_url": "https://www.timbertech.com/product/pro-terrain-collection/media_100b1cefd4057656acbdb6c9c678c7032489d2310.jpg?width=1200&format=pjpg&optimize=medium",
+      "hex": "#6C4C3C"
+    },
+    {
+      "name": "Stone Ash",
+      "slug": "stone-ash",
+      "collection": "Terrain Collection",
+      "product_url": "https://www.timbertech.com/product/pro-terrain-collection/?attribute_pa_color=stone-ash",
+      "image_url": "https://www.timbertech.com/product/pro-terrain-collection/media_100b1cefd4057656acbdb6c9c678c7032489d2310.jpg?width=1200&format=pjpg&optimize=medium",
+      "hex": "#6C4C3C"
+    }
+  ],
+  "Vintage Collection": [
+    {
+      "name": "Coastline",
+      "slug": "coastline",
+      "collection": "Vintage Collection",
+      "product_url": "https://www.timbertech.com/product/azek-vintage-collection/?attribute_pa_color=coastline",
+      "image_url": "https://www.timbertech.com/product/azek-vintage-collection/media_13c5a37711fdf95c43c12b8fe657f52f7dc1a1c9e.jpg?width=1200&format=pjpg&optimize=medium",
+      "hex": "#774F2F"
+    },
+    {
+      "name": "Cypress",
+      "slug": "cypress",
+      "collection": "Vintage Collection",
+      "product_url": "https://www.timbertech.com/product/azek-vintage-collection/?attribute_pa_color=cypress",
+      "image_url": "https://www.timbertech.com/product/azek-vintage-collection/media_13c5a37711fdf95c43c12b8fe657f52f7dc1a1c9e.jpg?width=1200&format=pjpg&optimize=medium",
+      "hex": "#774F2F"
+    },
+    {
+      "name": "Dark Hickory",
+      "slug": "dark-hickory",
+      "collection": "Vintage Collection",
+      "product_url": "https://www.timbertech.com/product/azek-vintage-collection/?attribute_pa_color=dark-hickory",
+      "image_url": "https://www.timbertech.com/product/azek-vintage-collection/media_13c5a37711fdf95c43c12b8fe657f52f7dc1a1c9e.jpg?width=1200&format=pjpg&optimize=medium",
+      "hex": "#774F2F"
+    },
+    {
+      "name": "English Walnut",
+      "slug": "english-walnut",
+      "collection": "Vintage Collection",
+      "product_url": "https://www.timbertech.com/product/azek-vintage-collection/?attribute_pa_color=english-walnut",
+      "image_url": "https://www.timbertech.com/product/azek-vintage-collection/media_13c5a37711fdf95c43c12b8fe657f52f7dc1a1c9e.jpg?width=1200&format=pjpg&optimize=medium",
+      "hex": "#774F2F"
+    },
+    {
+      "name": "Mahogany",
+      "slug": "mahogany",
+      "collection": "Vintage Collection",
+      "product_url": "https://www.timbertech.com/product/azek-vintage-collection/?attribute_pa_color=mahogany",
+      "image_url": "https://www.timbertech.com/product/azek-vintage-collection/media_13c5a37711fdf95c43c12b8fe657f52f7dc1a1c9e.jpg?width=1200&format=pjpg&optimize=medium",
+      "hex": "#774F2F"
+    },
+    {
+      "name": "Weathered Teak",
+      "slug": "weathered-teak",
+      "collection": "Vintage Collection",
+      "product_url": "https://www.timbertech.com/product/azek-vintage-collection/?attribute_pa_color=weathered-teak",
+      "image_url": "https://www.timbertech.com/product/azek-vintage-collection/media_13c5a37711fdf95c43c12b8fe657f52f7dc1a1c9e.jpg?width=1200&format=pjpg&optimize=medium",
+      "hex": "#774F2F"
+    }
+  ]
+}
