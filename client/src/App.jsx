@@ -29,6 +29,7 @@ export default function App() {
     collection: null,
     color: null,
     railing: 'baluster',
+    railingColor: 'black',
     stairs: {
       enabled: false,
       steps: 3,
@@ -73,6 +74,7 @@ export default function App() {
           collection: d.product?.collection || null,
           color: d.product ? { n: d.product.color_name, h: d.product.hex } : null,
           railing: d.railing_style || 'baluster',
+          railingColor: d.railing_color || 'black',
           stairs: d.stair_config
             ? { ...d.stair_config, enabled: !!d.has_stairs }
             : { enabled: !!d.has_stairs, steps: 3, width: 5, position: 'front-center' },
@@ -101,6 +103,7 @@ export default function App() {
           brand: sel.brand,
           color_hex: sel.color?.h,
           railing_style: sel.railing,
+          railing_color: sel.railingColor,
           has_stairs: sel.stairs?.enabled ? 1 : 0,
           stair_config: sel.stairs,
           customer_email: customerEmail || null,
@@ -143,7 +146,7 @@ export default function App() {
     setDesignId(null);
     setSel({
       shape: 'rectangle', width: 12, depth: 16,
-      brand: null, collection: null, color: null, railing: 'baluster',
+      brand: null, collection: null, color: null, railing: 'baluster', railingColor: 'black',
       stairs: { enabled: false, steps: 3, width: 5, position: 'front-center' },
     });
   };
@@ -204,7 +207,7 @@ export default function App() {
           onSelColor={handleColorSelect}
         />
       );
-      case 4: return <StepRailing sel={sel.railing} onSel={v => upd('railing', v)} />;
+      case 4: return <StepRailing sel={sel.railing} selColor={sel.railingColor} onSel={v => upd('railing', v)} onSelColor={v => upd('railingColor', v)} />;
       case 5: return <StepStairs stairs={sel.stairs} onStairs={v => upd('stairs', v)} />;
       case 6: return <StepSummary sel={sel} env={env} designId={designId} onSave={saveDesign} onRestart={restart} />;
       default: return null;
@@ -464,6 +467,7 @@ export default function App() {
     shape: sel.shape,
     deckColor: sel.color,
     railingStyle: sel.railing,
+    railingColor: sel.railingColor,
     view,
   };
 

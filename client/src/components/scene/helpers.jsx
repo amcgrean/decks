@@ -336,7 +336,8 @@ export function DeckBoards({ deckColor, base, shape, W = 900, DECK_Y = 342 }) {
               <rect x={0} y={y} width={W} height={brdH}
                 fill={img ? "url(#p-deck-img)" : (i % 3 === 0 ? lighten(b, 0.1) : i % 3 === 1 ? b : darken(b, 0.05))} />
               {img && <rect x={0} y={y} width={W} height={brdH} fill={i % 3 === 0 ? "rgba(255,255,255,0.06)" : i % 3 === 1 ? "transparent" : "rgba(0,0,0,0.1)"} />}
-              <rect x={0} y={y + brdH} width={W} height={gapH} fill={darken(b, 0.32)} />
+              <rect x={0} y={y} width={W} height={1} fill="rgba(255,255,255,0.2)" />
+              <rect x={0} y={y + brdH} width={W} height={gapH} fill={darken(b, 0.6)} />
             </g>
           );
         })}
@@ -359,7 +360,8 @@ export function DeckBoards({ deckColor, base, shape, W = 900, DECK_Y = 342 }) {
                 <rect x={0} y={y} width={W} height={brdH}
                   fill={img ? "url(#p-deck-img)" : (i % 3 === 0 ? lighten(b, 0.12) : i % 3 === 1 ? lighten(b, 0.04) : b)} />
                 {img && <rect x={0} y={y} width={W} height={brdH} fill={i % 3 === 0 ? "rgba(255,255,255,0.12)" : i % 3 === 1 ? "rgba(255,255,255,0.04)" : "rgba(0,0,0,0.05)"} />}
-                <rect x={0} y={y + brdH} width={W} height={gapH} fill={darken(b, 0.32)} />
+                <rect x={0} y={y} width={W} height={1} fill="rgba(255,255,255,0.2)" />
+                <rect x={0} y={y + brdH} width={W} height={gapH} fill={darken(b, 0.6)} />
               </g>
             );
           })}
@@ -394,15 +396,33 @@ export function DeckBoards({ deckColor, base, shape, W = 900, DECK_Y = 342 }) {
 }
 
 // ── RAILING ─────────────────────────────────────────────────
-export function Railing({ style, base, shape, W = 900, DECK_Y = 342 }) {
+export function Railing({ style, railingColor = 'black', deckColor, base, shape, W = 900, DECK_Y = 342 }) {
   if (!style || style === 'none') return null;
-  const b = base || '#9A7E5C';
+  const b = deckColor?.h || base || '#9A7E5C';
+  const imgUrl = deckColor?.img;
   const isWrap = shape === 'wraparound';
   const L = isWrap ? W * 0.016 : W * 0.088;
   const R = isWrap ? W * 0.984 : W * 0.912;
   const RH = 72, RT = DECK_Y - RH;
-  const capFill = darken('#EAE2D0', 0.04);
-  const postFill = darken(b, 0.24);
+
+  let capFill, postFill, shadowFill;
+  if (railingColor === 'white') {
+    capFill = 'url(#g-rail-white)';
+    postFill = 'url(#g-rail-white)';
+    shadowFill = '#C4C4C0';
+  } else if (railingColor === 'bronze') {
+    capFill = 'url(#g-rail-bronze)';
+    postFill = 'url(#g-rail-bronze)';
+    shadowFill = '#221A12';
+  } else if (railingColor === 'match') {
+    capFill = imgUrl ? "url(#p-deck-img)" : darken(b, 0.1);
+    postFill = imgUrl ? "url(#p-deck-img)" : darken(b, 0.24);
+    shadowFill = darken(b, 0.38);
+  } else {
+    capFill = 'url(#g-rail-black)';
+    postFill = 'url(#g-rail-black)';
+    shadowFill = '#121210';
+  }
   const span = R - L;
   const postXs = [L, L + span * 0.17, L + span * 0.34, L + span * 0.5, L + span * 0.67, L + span * 0.83, R];
 
@@ -414,14 +434,14 @@ export function Railing({ style, base, shape, W = 900, DECK_Y = 342 }) {
   );
   const BotRail = () => <rect x={L - 2} y={DECK_Y - 13} width={span + 4} height={9} fill={capFill} rx="2" />;
   const Posts = () => <>{postXs.map((x, i) => <rect key={i} x={x - 5.5} y={RT - 12} width={11} height={RH + 12} rx="2.5" fill={postFill} />)}</>;
-  const Caps = () => <>{postXs.map((x, i) => <rect key={i} x={x - 8} y={RT - 16} width={16} height={7} rx="2" fill={darken(capFill, 0.06)} />)}</>;
+  const Caps = () => <>{postXs.map((x, i) => <rect key={i} x={x - 8} y={RT - 16} width={16} height={7} rx="2" fill={shadowFill} />)}</>;
 
   if (style === 'baluster') {
     const bals = []; for (let x = L + 18; x < R - 14; x += 13) bals.push(x);
     return (
       <g>
         <BotRail /><TopRail /><Caps />
-        {bals.map((x, i) => <rect key={i} x={x} y={RT + 2} width={5} height={RH - 22} rx="1.5" fill={darken(capFill, 0.14)} opacity="0.95" />)}
+        {bals.map((x, i) => <rect key={i} x={x} y={RT + 2} width={5} height={RH - 22} rx="1.5" fill={shadowFill} opacity="0.95" />)}
         <Posts />
       </g>
     );
@@ -464,7 +484,7 @@ export function Railing({ style, base, shape, W = 900, DECK_Y = 342 }) {
         <Posts /><Caps />
         {boards.map((y, i) => (
           <g key={i}>
-            <rect x={L + 8} y={y} width={span - 16} height={11} rx="2" fill={i % 2 === 0 ? darken(b, 0.16) : darken(b, 0.24)} />
+            <rect x={L + 8} y={y} width={span - 16} height={11} rx="2" fill={railingColor === 'match' ? (imgUrl ? "url(#p-deck-img)" : darken(b, 0.16)) : shadowFill} />
             <rect x={L + 8} y={y} width={span - 16} height={3} rx="2" fill="rgba(255,255,255,0.08)" />
           </g>
         ))}

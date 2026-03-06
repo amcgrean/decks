@@ -3,7 +3,7 @@ import SceneDefs from './SceneDefs';
 import { HouseSVG } from './helpers';
 import { darken } from '../../utils/color';
 
-export default function CornerView({ houseStyle, shape, deckColor, railingStyle }) {
+export default function CornerView({ houseStyle, shape, deckColor, railingStyle, railingColor = 'black' }) {
   const base = deckColor?.h || null;
   const b = base || '#9A7E5C';
   const W = 900, BY = 342, DECK_BOT = BY + 148; // 490
@@ -39,8 +39,25 @@ export default function CornerView({ houseStyle, shape, deckColor, railingStyle 
   const frontSpan = RR - RL;
   const fPostXs = [RL, RL + frontSpan * 0.17, RL + frontSpan * 0.34, RL + frontSpan * 0.5,
     RL + frontSpan * 0.67, RL + frontSpan * 0.83, RR];
-  const capC = darken('#EAE2D0', 0.04);
-  const postC = darken(b, 0.24);
+  let capC, postC, shadowC;
+  const imgUrl = deckColor?.img;
+  if (railingColor === 'white') {
+    capC = 'url(#g-rail-white)';
+    postC = 'url(#g-rail-white)';
+    shadowC = '#C4C4C0';
+  } else if (railingColor === 'bronze') {
+    capC = 'url(#g-rail-bronze)';
+    postC = 'url(#g-rail-bronze)';
+    shadowC = '#221A12';
+  } else if (railingColor === 'match') {
+    capC = imgUrl ? "url(#p-corner-img)" : darken(b, 0.1);
+    postC = imgUrl ? "url(#p-corner-img)" : darken(b, 0.24);
+    shadowC = darken(b, 0.38);
+  } else {
+    capC = 'url(#g-rail-black)';
+    postC = 'url(#g-rail-black)';
+    shadowC = '#121210';
+  }
 
   const CornerRailing = () => {
     if (!railingStyle || railingStyle === 'none') return null;
@@ -53,13 +70,13 @@ export default function CornerView({ houseStyle, shape, deckColor, railingStyle 
       for (let x = RL + 14; x < RR - 8; x += 15) bals.push(x);
       return (
         <g>
-          <polygon points={sidePts} fill={darken(capC, 0.06)} opacity="0.65" />
+          <polygon points={sidePts} fill={shadowC} opacity="0.65" />
           <rect x={RL} y={DECK_BOT - 11} width={frontSpan} height={9} fill={capC} rx="2" />
           <rect x={RL} y={RAIL_TOP_Y - 8} width={frontSpan} height={9} fill={capC} rx="2.5" />
           <rect x={RL} y={RAIL_TOP_Y - 8} width={frontSpan} height={3} fill="rgba(255,255,255,0.18)" rx="2.5" />
           {bals.map((x, i) => (
             <rect key={i} x={x} y={RAIL_TOP_Y + 1} width={5} height={RAIL_H_NEAR - 20}
-              rx="1.5" fill={darken(capC, 0.14)} opacity="0.93" />
+              rx="1.5" fill={shadowC} opacity="0.93" />
           ))}
           {fPostXs.map((x, i) => (
             <rect key={i} x={x - 5.5} y={RAIL_TOP_Y - 11} width={11} height={RAIL_H_NEAR + 11}
@@ -115,20 +132,20 @@ export default function CornerView({ houseStyle, shape, deckColor, railingStyle 
           <polygon points={sidePts} fill={darken(b, 0.18)} opacity="0.55" />
           {fPostXs.map((x, i) => (
             <rect key={i} x={x - 5.5} y={RAIL_TOP_Y - 11} width={11} height={RAIL_H_NEAR + 11}
-              rx="2.5" fill={darken(b, 0.24)} />
+              rx="2.5" fill={postC} />
           ))}
           {Array.from({ length: 4 }, (_, i) => {
             const y = RAIL_TOP_Y + 7 + i * 13;
             return (
               <g key={i}>
                 <rect x={RL + 8} y={y} width={frontSpan - 16} height={9} rx="2"
-                  fill={i % 2 === 0 ? darken(b, 0.16) : darken(b, 0.24)} />
+                  fill={railingColor === 'match' ? (imgUrl ? "url(#p-corner-img)" : darken(b, 0.16)) : shadowC} />
                 <rect x={RL + 8} y={y} width={frontSpan - 16} height={3} rx="2"
                   fill="rgba(255,255,255,0.08)" />
               </g>
             );
           })}
-          <rect x={RL} y={RAIL_TOP_Y - 8} width={frontSpan} height={9} fill={darken(b, 0.28)} rx="2.5" />
+          <rect x={RL} y={RAIL_TOP_Y - 8} width={frontSpan} height={9} fill={shadowC} rx="2.5" />
         </g>
       );
     }
