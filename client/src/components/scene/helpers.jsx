@@ -403,7 +403,8 @@ export function Railing({ style, railingColor = 'black', deckColor, base, shape,
   const isWrap = shape === 'wraparound';
   const L = isWrap ? W * 0.016 : W * 0.088;
   const R = isWrap ? W * 0.984 : W * 0.912;
-  const RH = 72, RT = DECK_Y - RH;
+  const FRONT_Y = DECK_Y + 148; // depth of deck
+  const RH = 72, RT = FRONT_Y - RH;
 
   let capFill, postFill, shadowFill;
   if (railingColor === 'white') {
@@ -432,7 +433,7 @@ export function Railing({ style, railingColor = 'black', deckColor, base, shape,
       <rect x={L - 2} y={RT - 8} width={span + 4} height={3} fill="rgba(255,255,255,0.2)" rx="2.5" />
     </>
   );
-  const BotRail = () => <rect x={L - 2} y={DECK_Y - 13} width={span + 4} height={9} fill={capFill} rx="2" />;
+  const BotRail = () => <rect x={L - 2} y={FRONT_Y - 13} width={span + 4} height={9} fill={capFill} rx="2" />;
   const Posts = () => <>{postXs.map((x, i) => <rect key={i} x={x - 5.5} y={RT - 12} width={11} height={RH + 12} rx="2.5" fill={postFill} />)}</>;
   const Caps = () => <>{postXs.map((x, i) => <rect key={i} x={x - 8} y={RT - 16} width={16} height={7} rx="2" fill={shadowFill} />)}</>;
 

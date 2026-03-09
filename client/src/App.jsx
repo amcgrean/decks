@@ -8,7 +8,7 @@ import StepRailing from './components/wizard/StepRailing';
 import StepStairs from './components/wizard/StepStairs';
 import StepSummary from './components/wizard/StepSummary';
 import EnvironmentPanel from './components/layout/EnvironmentPanel';
-import { BRANDS, VIEWS, STEP_LABELS } from './data/brands';
+import { BRANDS, VIEWS, STEP_LABELS, RAILING_BRANDS } from './data/brands';
 import { fireEvent } from './utils/analytics';
 
 const TOTAL_STEPS = 7; // 0–6
@@ -28,7 +28,8 @@ export default function App() {
     brand: null,
     collection: null,
     color: null,
-    railing: 'baluster',
+    railingBrand: null,
+    railingSeries: null,
     railingColor: 'black',
     stairs: {
       enabled: false,
@@ -73,7 +74,8 @@ export default function App() {
           brand: d.product?.brand || null,
           collection: d.product?.collection || null,
           color: d.product ? { n: d.product.color_name, h: d.product.hex } : null,
-          railing: d.railing_style || 'baluster',
+          railingBrand: d.railing_brand || null,
+          railingSeries: d.railing_series || null,
           railingColor: d.railing_color || 'black',
           stairs: d.stair_config
             ? { ...d.stair_config, enabled: !!d.has_stairs }
@@ -102,7 +104,9 @@ export default function App() {
           deck_depth: sel.depth,
           brand: sel.brand,
           color_hex: sel.color?.h,
-          railing_style: sel.railing,
+          railing_brand: sel.railingBrand,
+          railing_series: sel.railingSeries,
+          railing_style: getRailingStyle(sel.railingBrand, sel.railingSeries),
           railing_color: sel.railingColor,
           has_stairs: sel.stairs?.enabled ? 1 : 0,
           stair_config: sel.stairs,
@@ -119,6 +123,14 @@ export default function App() {
   // ── STATE HELPERS ─────────────────────────────────────────
   const upd = (k, v) => setSel(s => ({ ...s, [k]: v }));
 
+  const getRailingStyle = (rb, rs) => {
+    if (!rb || rb === 'none') return 'none';
+    const b = RAILING_BRANDS.find(x => x.id === rb);
+    if (!b) return 'none';
+    const s = b.series.find(x => x.id === rs);
+    return s ? s.style : 'none';
+  };
+
   const brand = BRANDS.find(b => b.id === sel.brand);
 
   const canNext = () => {
@@ -126,7 +138,7 @@ export default function App() {
     if (step === 1) return sel.width > 0 && sel.depth > 0;
     if (step === 2) return !!sel.brand;
     if (step === 3) return !!sel.color;
-    if (step === 4) return !!sel.railing;
+    if (step === 4) return !!sel.railingBrand && (sel.railingBrand === 'none' || !!sel.railingSeries);
     if (step === 5) return true; // stairs optional
     return true;
   };
@@ -146,7 +158,7 @@ export default function App() {
     setDesignId(null);
     setSel({
       shape: 'rectangle', width: 12, depth: 16,
-      brand: null, collection: null, color: null, railing: 'baluster', railingColor: 'black',
+      brand: null, collection: null, color: null, railingBrand: null, railingSeries: null, railingColor: 'black',
       stairs: { enabled: false, steps: 3, width: 5, position: 'front-center' },
     });
   };
@@ -207,7 +219,16 @@ export default function App() {
           onSelColor={handleColorSelect}
         />
       );
-      case 4: return <StepRailing sel={sel.railing} selColor={sel.railingColor} onSel={v => upd('railing', v)} onSelColor={v => upd('railingColor', v)} />;
+      case 4: return (
+        <StepRailing
+          selBrand={sel.railingBrand}
+          selSeries={sel.railingSeries}
+          selColor={sel.railingColor}
+          onSelBrand={v => { upd('railingBrand', v); upd('railingSeries', null); }}
+          onSelSeries={v => upd('railingSeries', v)}
+          onSelColor={v => upd('railingColor', v)}
+        />
+      );
       case 5: return <StepStairs stairs={sel.stairs} onStairs={v => upd('stairs', v)} />;
       case 6: return <StepSummary sel={sel} env={env} designId={designId} onSave={saveDesign} onRestart={restart} />;
       default: return null;
@@ -332,7 +353,7 @@ export default function App() {
     const parts = [
       sel.shape,
       brand && brand.name,
-      sel.railing && sel.railing !== 'none' && sel.railing,
+      sel.railingBrand && sel.railingBrand !== 'none' && 'Railing',
     ].filter(Boolean);
     return (
       <div style={{
@@ -466,7 +487,7 @@ export default function App() {
     showGrass: env.showGrass,
     shape: sel.shape,
     deckColor: sel.color,
-    railingStyle: sel.railing,
+    railingStyle: getRailingStyle(sel.railingBrand, sel.railingSeries),
     railingColor: sel.railingColor,
     view,
   };

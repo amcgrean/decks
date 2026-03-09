@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { BRANDS, SHAPES, RAILING_STYLES, RAILING_COLORS } from '../../data/brands';
+import { BRANDS, SHAPES, RAILING_BRANDS, RAILING_COLORS } from '../../data/brands';
 import { fireEvent } from '../../utils/analytics';
 
 // Step 7: Summary — review selections, save, share, email, request samples
@@ -20,9 +20,17 @@ export default function StepSummary({ sel, env, designId, onSave, onRestart }) {
 
   const brand = BRANDS.find(b => b.id === sel.brand);
   const shape = SHAPES.find(s => s.id === sel.shape);
-  const railing = RAILING_STYLES.find(r => r.id === sel.railing);
+  const rBrand = RAILING_BRANDS.find(b => b.id === sel.railingBrand);
+  const rSeries = rBrand?.series?.find(s => s.id === sel.railingSeries);
   const rColor = RAILING_COLORS.find(c => c.id === sel.railingColor);
   const sqFt = Math.round(sel.width * sel.depth);
+
+  const formatRailing = () => {
+    if (!sel.railingBrand || sel.railingBrand === 'none') return 'None';
+    if (!rBrand || !rSeries) return 'Unknown';
+    if (!rColor) return `${rBrand.name} - ${rSeries.name}`;
+    return `${rBrand.name} - ${rSeries.name} (${rColor.name})`;
+  };
 
   const rows = [
     { l: 'Deck Shape', v: shape?.name },
@@ -30,7 +38,7 @@ export default function StepSummary({ sel, env, designId, onSave, onRestart }) {
     { l: 'Brand', v: brand?.name },
     { l: 'Collection', v: sel.collection },
     { l: 'Color', v: sel.color?.n },
-    { l: 'Railing', v: railing ? (railing.id !== 'none' && rColor ? `${railing.name} (${rColor.name})` : railing.name) : undefined },
+    { l: 'Railing', v: formatRailing() },
     { l: 'Stairs', v: sel.stairs?.enabled ? `Yes · ${sel.stairs.steps} steps · ${sel.stairs.width}′ wide · ${sel.stairs.position?.replace('-', ' ')}` : 'None' },
   ].filter(r => r.v);
 

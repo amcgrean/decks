@@ -23,13 +23,13 @@ router.post('/', (req, res) => {
     const id = uuidv4();
     db.prepare(`
       INSERT INTO designs (id, quote_name, notes, house_style, house_facade, house_color_hex,
-        deck_shape, deck_width, deck_depth, product_id, railing_style, railing_color, has_stairs, stair_config, customer_email)
-      VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+        deck_shape, deck_width, deck_depth, product_id, railing_brand, railing_series, railing_style, railing_color, has_stairs, stair_config, customer_email)
+      VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
     `).run(
       id, quote_name || null, notes || null, house_style || null,
       house_facade || null, house_color_hex || null,
       deck_shape || null, deck_width || null, deck_depth || null,
-      resolvedProductId, railing_style || null, railing_color || null,
+      resolvedProductId, railing_brand || null, railing_series || null, railing_style || null, railing_color || null,
       has_stairs ? 1 : 0, stair_config ? JSON.stringify(stair_config) : null,
       customer_email || null
     );

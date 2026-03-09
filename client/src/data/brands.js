@@ -170,6 +170,43 @@ export const RAILING_STYLES = [
   { id: 'horizontal', name: 'Horizontal Board', desc: 'Contemporary linear style' },
 ];
 
+export const RAILING_BRANDS = [
+  {
+    id: 'westbury', name: 'Westbury Aluminum',
+    series: [
+      { id: 'tuscany', name: 'Tuscany', desc: 'Classic 2-Rail Baluster', style: 'baluster' },
+      { id: 'riviera', name: 'Riviera', desc: '3-Rail Baluster', style: 'baluster' },
+      { id: 'verticable', name: 'VertiCable', desc: 'Vertical Stainless Cable', style: 'cable' },
+      { id: 'veranda', name: 'Veranda', desc: 'Glass Panel System', style: 'glass' }
+    ]
+  },
+  {
+    id: 'trex', name: 'Trex',
+    series: [
+      { id: 'transcend', name: 'Transcend', desc: 'Premium Composite', style: 'baluster' },
+      { id: 'signature', name: 'Signature', desc: 'Aluminum / Horizontal Rod', style: 'horizontal' },
+      { id: 'select', name: 'Select', desc: 'Classic Composite', style: 'baluster' },
+      { id: 'glass', name: 'Signature Glass', desc: 'Framed Glass Panel', style: 'glass' }
+    ]
+  },
+  {
+    id: 'timbertech', name: 'TimberTech / AZEK',
+    series: [
+      { id: 'classic_composite', name: 'Classic Composite', desc: 'Traditional Baluster', style: 'baluster' },
+      { id: 'impression_rail', name: 'Impression Rail Express', desc: 'Aluminum Baluster', style: 'baluster' },
+      { id: 'cable_rail', name: 'Cable Rail', desc: 'Horizontal Cable Infill', style: 'cable' }
+    ]
+  },
+  {
+    id: 'deckorators', name: 'Deckorators',
+    series: [
+      { id: 'alx_classic', name: 'ALX Classic', desc: 'Aluminum Baluster', style: 'baluster' },
+      { id: 'cable', name: 'ALX Contemporary Cable', desc: 'Modern Cable Rail', style: 'cable' },
+      { id: 'glass', name: 'Glass Balusters', desc: 'Slim glass infill', style: 'glass' }
+    ]
+  }
+];
+
 export const RAILING_COLORS = [
   { id: 'black', name: 'Textured Black', h: '#2A2A28' },
   { id: 'white', name: 'Classic White', h: '#E8E8E6' },
